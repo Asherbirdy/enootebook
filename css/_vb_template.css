@@ -1,0 +1,65 @@
+body {
+  margin: 0 auto;
+}
+
+/* -----------------header------------------------- */
+/* NAV */
+header {
+  width: 100%;
+  background-color: #3c91e0;
+}
+
+nav {
+  display: flex;
+
+  font-size: 22px;
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.logo {
+  color: white;
+  width: 200px;
+}
+
+.btn-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.btn-navigation li a {
+  color: white;
+  text-decoration: none;
+  margin: 20px;
+  display: inline-block;
+}
+
+.btn-loginbox {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 50px;
+}
+
+.btn-loginbox li a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+
+  /* display: inline-block; */
+}
+
+.btn-login {
+  border: 1px solid white;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.btn-freelogin {
+  padding: 5px;
+  color: white;
+  background-color: orange;
+  border-radius: 5px;
+}

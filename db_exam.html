@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/db_exam.css" />
+    <title>Enotebook Dashboard Panal</title>
+  </head>
+  <body>
+    <nav>
+      <div class="top-info">
+        <img class="logo" src="svg/enotebook_logo-01.svg" />
+      </div>
+
+      <div class="menu-items">
+        <ul class="nav-links">
+          <li>
+            <a href="db_home.html">
+              <i>
+                <img class="icon-s" src="svg/02_icon/icon-home.svg" />
+              </i>
+
+              <span class="link-name">主頁面</span>
+            </a>
+          </li>
+          <li>
+            <a href="db_wordlist.html">
+              <i>
+                <img class="icon-s" src="svg/02_icon/icon-list.svg" />
+              </i>
+
+              <span class="link-name">單字筆記簿</span>
+            </a>
+          </li>
+          <li>
+            <a href="db_exam.html">
+              <i><img class="icon-s" src="svg/02_icon/icon-test.svg" /></i>
+
+              <span class="link-name">模擬考試</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="logout-mode">
+          <li class="mode">
+            <a href="index.html">
+              <i><img class="icon-s" src="svg/02_icon/icon-logout.svg" /></i>
+
+              <span class="link-name">登出</span>
+            </a>
+          </li>
+          <li>
+            <a href="db_report.html">
+              <i><img class="icon-s" src="svg/02_icon/icon-advice.svg" /></i>
+
+              <span class="link-name">回報問題</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- ----------------儀表板------------------ -->
+    <section class="dashboard">
+      <!-- 標題 -->
+
+      <!-- Content -->
+      <div class="dash-content">
+        <div class="top">
+          <div class="top-greeting">考試規則</div>
+        </div>
+        <div class="overview">
+          <div class="text-box">
+            <p>1. 本次考試共有八題，一次性顯示在同一個頁面上。</p>
+            <p>2. 每個題目都是用輸入的方式回答，系統會隨機產生八個單字。</p>
+            <p>3. 每個題目顯示英文字幕的第一個字母和中文翻譯。</p>
+            <p>4. 答對加一分，答錯減一分。有一次重新回答的機會。</p>
+            <p>5. 考試時間10分鐘，時間結束後系統自動提交答案。</p>
+            <p>6. 可查看答案解析和相關單詞學習資料。</p>
+          </div>
+          <a class="btn-exam" href="#">建立考試！</a>
+        </div>
+      </div>
+    </section>
+    <script src="/js/dashboard_script.js"></script>
+  </body>
+</html>

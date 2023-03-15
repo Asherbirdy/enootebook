@@ -1,0 +1,99 @@
+@import url("reset.css");
+@import url("_db_template.css");
+
+/* --------------Dashboard------------- */
+
+.dashboard {
+  position: relative;
+  left: 230px;
+  /* background-color: rgb(255, 255, 255); */
+
+  height: 100vh;
+
+  width: calc(100% - 230px);
+}
+
+.top .top-greeting {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* ----------------- */
+
+.title {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.title .text {
+  font-size: 24px;
+  font-weight: 500;
+  color: black;
+  margin-left: 10px;
+}
+
+.dash-content .boxes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.dash-content .boxes .box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  border-radius: 12px;
+  width: calc(100% / 3 - 25px);
+  padding: 30px 20px;
+  background-color: white;
+  /* border: 1px solid grey; */
+
+  box-shadow: 10px 11px 27px -11px rgba(0, 0, 0, 0.39);
+}
+
+.boxes .box i {
+  font-size: 35px;
+  color: white;
+}
+
+.boxes .box .text {
+  white-space: nowrap;
+  font-size: 30px;
+  color: rgb(113, 113, 113);
+}
+
+.boxes .box .number {
+  white-space: nowrap;
+  font-size: 130px;
+  font-weight: 500;
+}
+
+/* -------------RecordBox--------------- */
+
+.dash-testRecord {
+  /* border: 1px solid black; */
+  margin: 50px;
+}
+
+.record-bigBox {
+  /* border: 1px solid black; */
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  flex-shrink: 1;
+}
+
+.record-smallBox {
+  background-color: white;
+  /* border: 1px solid rgb(162, 162, 162); */
+  box-shadow: 10px 11px 27px -11px rgba(0, 0, 0, 0.39);
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 25px;
+  line-height: 1.6;
+}
+
+/*  */

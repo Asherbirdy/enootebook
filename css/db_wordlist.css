@@ -1,0 +1,119 @@
+@import url("reset.css");
+
+/* 固定nav邊和header */
+@import url("_db_template.css");
+
+/* --------------Dashboard------------- */
+
+.dashboard {
+  position: relative;
+  left: 230px;
+  /* background-color: rgb(255, 255, 255); */
+
+  height: 100vh;
+
+  width: calc(100% - 230px);
+}
+
+.top .top-greeting {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* ----------------top--------------- */
+
+/* ----------------- */
+
+.searchbar-box {
+  display: flex;
+
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.searchbar {
+  width: calc(100% - 50px - 285px);
+  padding: 10px;
+
+  font-size: 25px;
+}
+
+.searchbar-box a {
+  display: block;
+  color: white;
+  border-radius: 10px;
+  background-color: orange;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 20px;
+  line-height: 45px;
+  font-size: 25px;
+}
+
+/* ------------text row-------------- */
+.top-text-box {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 20px;
+}
+.top-text-box .btn-text a {
+  text-decoration: none;
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(57, 152, 219);
+  color: white;
+  border-radius: 10px;
+}
+
+/* ------------------------------- */
+
+.filter-box {
+}
+
+.filter-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  background-color: rgb(0, 155, 238);
+  margin-top: 40px;
+  padding: 20px 0;
+  color: white;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.filter-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  padding: 20px 0;
+  color: rgb(0, 0, 0);
+  background-color: white;
+}
+
+.filter-starbox {
+  display: flex;
+}
+
+.icon-delete {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-right: 10px;
+}
+
+.word {
+  width: calc(100% / 3);
+  flex-grow: 1;
+  text-align: center;
+  align-items: start;
+  font-size: 24px;
+  position: relative;
+}
+
+.border-right {
+  border-right: 3px solid white;
+}

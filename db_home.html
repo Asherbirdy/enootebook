@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/db_home.css" />
+    <title>Enotebook Dashboard Panal</title>
+  </head>
+  <body>
+    <nav>
+      <div class="top-info">
+        <img class="logo" src="svg/enotebook_logo-01.svg" />
+      </div>
+
+      <div class="menu-items">
+        <ul class="nav-links">
+          <li>
+            <a href="db_home.html">
+              <i>
+                <img class="icon-s" src="svg/02_icon/icon-home.svg" />
+              </i>
+
+              <spa class="link-name">主頁面</spa>
+            </a>
+          </li>
+          <li>
+            <a href="db_wordlist.html">
+              <i>
+                <img class="icon-s" src="svg/02_icon/icon-list.svg" />
+              </i>
+
+              <span class="link-name">單字筆記簿</span>
+            </a>
+          </li>
+          <li>
+            <a href="db_exam.html">
+              <i><img class="icon-s" src="svg/02_icon/icon-test.svg" /></i>
+
+              <span class="link-name">模擬考試</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="logout-mode">
+          <li class="mode">
+            <a href="index.html">
+              <i><img class="icon-s" src="svg/02_icon/icon-logout.svg" /></i>
+
+              <span class="link-name">登出</span>
+            </a>
+          </li>
+          <li>
+            <a href="db_report.html">
+              <i><img class="icon-s" src="svg/02_icon/icon-advice.svg" /></i>
+
+              <span class="link-name">回報問題</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- ----------------儀表板------------------ -->
+    <section class="dashboard">
+      <div class="dash-content">
+        <div class="top">
+          <div class="top-greeting">主畫面</div>
+        </div>
+        <div class="overview">
+          <div class="title">
+            <span class="text">Dashboard</span>
+          </div>
+          <div class="boxes">
+            <div class="box box1">
+              <i></i>
+              <span class="text">筆記簿總數</span>
+              <span class="number">23</span>
+            </div>
+            <div class="box box2">
+              <i></i>
+              <span class="text">總考試次數</span>
+              <span class="number">4</span>
+            </div>
+            <div class="box box3">
+              <i> </i>
+              <span class="text">單字平均熟悉度</span>
+              <span class="number">3.7</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dash-testRecord">
+        <div class="title">
+          <span class="text">近期考試記錄：</span>
+        </div>
+        <div class="record-bigBox">
+          <div class="record-smallBox">
+            <img class="icon-m" src="svg/02_icon/icon-correct.svg" />
+            <div>
+              apple, pineapple, banana, apple, pineapple, banana, apple,
+              pineapple, banana,
+            </div>
+          </div>
+          <div class="record-smallBox">
+            <img class="icon-m" src="svg/02_icon/icon-wrong.svg" />
+            <div>
+              apple, pineapple, banana, apple, pineapple, banana, apple,
+              pineapple, banana,
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="/js/dashboard_script.js"></script>
+  </body>
+</html>

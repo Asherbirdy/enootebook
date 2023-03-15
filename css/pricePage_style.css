@@ -1,0 +1,192 @@
+@import url("reset.css");
+@import url("_vb_template.css");
+
+/* ------------------head-bn---------------- */
+.head-bn {
+  width: 100%;
+  /* background-color: bisque; */
+}
+
+.head-bn-outbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0 auto;
+  width: 1400px;
+}
+
+.head-bn-title {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+.head-bn-textbox {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.head-bn-smallbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.head-bn-smallbox img {
+  width: 20px;
+}
+
+/* .head-bn-smallbox p {
+} */
+
+.head-bn-btn-orange {
+  margin-top: 20px;
+  text-decoration: none;
+  padding: 5px 20px;
+  background-color: orange;
+  color: white;
+
+  border-radius: 10px;
+  font-size: 30px;
+  margin-bottom: 100px;
+}
+
+/* ---------------第二個banner------------- */
+.learn-ban-out {
+  width: 100%;
+  background-color: #3c91e0;
+}
+
+.learn-ban-in {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 100px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.learn-ban-in h2 {
+  font-size: 50px;
+  color: white;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+.learn-ban-in h3 {
+  font-size: 30px;
+  color: white;
+  padding-bottom: 60px;
+}
+
+/* 第二個banner＿中間三個字卡 */
+.learn-all-cardbox {
+  display: flex;
+  gap: 30px;
+}
+
+.learn-cardbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 60px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.learn-cardbox h4 {
+  font-size: 40px;
+  color: #3c91e0;
+  font-weight: bold;
+}
+.learn-cardbox img {
+  width: 100%;
+}
+
+.learn-icon-textbox {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.learn-icon-textbox img {
+  width: 30px;
+}
+
+.learn-icon-textbox p {
+  font-size: 30px;
+}
+
+.learn-cardbox a {
+  display: inline-block;
+  background-color: orange;
+  padding: 15px 50px;
+  color: white;
+  font-size: 25px;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+/* ------------表格--------------- */
+/* .compare-out {
+} */
+
+.compare-in {
+  width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 120px 0;
+}
+
+.compare-title {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #3c91e0;
+}
+
+.compare-subtitle {
+  font-size: 30px;
+  margin-bottom: 60px;
+  color: #3c91e0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 40px;
+  outline: 1px solid rgb(33, 57, 82);
+  border-radius: 15px;
+  overflow: hidden;
+
+  color: white;
+}
+
+th,
+td {
+  padding: 50px 38px;
+  text-align: center;
+  outline: 1px solid rgb(128, 192, 255);
+}
+th {
+  background-color: lightgray;
+}
+
+.row1 {
+  background-color: #3c91e0;
+}
+
+.row-other {
+  background-color: #ffffff;
+  color: black;
+}

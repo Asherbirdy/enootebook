@@ -1,0 +1,48 @@
+@import url("reset.css");
+
+/* 固定nav邊和header */
+@import url("_db_template.css");
+
+/* --------------Dashboard------------- */
+
+.dashboard {
+  position: relative;
+  left: 230px;
+  /* background-color: rgb(255, 255, 255); */
+  height: 100vh;
+  width: calc(100% - 230px);
+}
+
+/* TOP */
+.top .top-greeting {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* Content */
+
+.overview {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-box {
+  background-color: #fff;
+  padding: 20px;
+  display: inline-block;
+
+  font-size: 20px;
+  line-height: 2;
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+
+.btn-exam {
+  width: 10%;
+  padding: 10px 20px;
+  text-align: center;
+  background-color: orange;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+}

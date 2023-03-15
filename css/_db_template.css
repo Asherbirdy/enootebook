@@ -1,0 +1,136 @@
+/* Nav & Top */
+
+body {
+  min-height: 100vh;
+  background-color: rgb(246, 246, 246);
+}
+
+/* style setting */
+
+.icon-s {
+  width: 20px;
+}
+
+.icon-m {
+  width: 40px;
+}
+
+/* ----------------NAV----------------- */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200px;
+  padding: 10px 14px;
+  background-color: rgb(255, 255, 255);
+  border-right: 1px solid rgb(224, 224, 224);
+  transition: all 0.5s ease;
+}
+
+nav .top-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.head-img {
+  border-radius: 50%;
+  width: 60px;
+  margin-right: 100px;
+}
+
+.logo {
+  margin-top: 40px;
+}
+
+nav .logo-image {
+  display: flex;
+  justify-content: center;
+  min-width: 45px;
+}
+
+nav .logo-image img {
+  width: 40px;
+  object-fit: cover;
+  display: block;
+}
+
+nav .logo-name .logo_name {
+  font-size: 22px;
+  font-weight: 600;
+  color: rgb(56, 113, 255);
+  margin-left: 14px;
+}
+
+nav .menu-items {
+  margin-top: 40px;
+  height: calc(100% - 120px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-items li a {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  position: relative;
+  text-decoration: none;
+}
+
+.nav-links li a:hover:before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background-color: rgb(43, 43, 230);
+}
+
+.menu-items li a i {
+  font-size: 24px;
+  min-width: 45px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link-name {
+  font-size: 18px;
+  font-weight: 400;
+  color: grey;
+  text-decoration: none;
+}
+
+.nav-links li a:hover i,
+.nav-links li a:hover .link-name {
+  color: rgb(10, 34, 113);
+}
+
+.menu-items,
+.logout-mode {
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.menu-items .mode {
+  display: flex;
+  align-content: center;
+}
+
+/* TOP */
+.dashboard .top {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 270px);
+  justify-content: space-between;
+  /* background-color: rgb(255, 255, 255); */
+  padding: 40px 0;
+}
+
+.dashboard .dash-content {
+  margin: 30px;
+}
