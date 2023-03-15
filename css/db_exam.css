@@ -1,8 +1,5 @@
 @import url("template/reset.css");
 
-/* 固定nav邊和header */
-@import url("template/db_template.css");
-
 /* --------------Dashboard------------- */
 
 .dashboard {
