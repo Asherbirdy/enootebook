@@ -1,7 +1,7 @@
-@import url("reset.css");
+@import url("template/reset.css");
 
 /* 固定nav邊和header */
-@import url("_db_template.css");
+@import url("template/db_template.css");
 
 /* --------------Dashboard------------- */
 
