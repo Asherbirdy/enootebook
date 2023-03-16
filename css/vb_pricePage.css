@@ -3,6 +3,8 @@
 /* ------------------head-bn---------------- */
 .head-bn {
   width: 100%;
+  background-image: url("/svg/03_illustrator/03_PricingPage/top_dot-01.svg");
+  background-size: cover;
 }
 
 .head-bn-outbox {
@@ -122,7 +124,7 @@
   display: flex;
   gap: 10px;
   align-self: start;
-  justify-content: start;
+  justify-content: center;
 
   margin-bottom: 20px;
 }
@@ -133,6 +135,7 @@
 
 .learn-icon-textbox p {
   font-size: 20px;
+  align-self: center;
 }
 
 /* ------------表格--------------- */

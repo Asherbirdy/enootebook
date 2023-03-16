@@ -93,6 +93,10 @@
   font-weight: bold;
 }
 
+.stepbox img {
+  width: 40%;
+}
+
 .box-text {
   font-size: 32px;
   margin-bottom: 20px;

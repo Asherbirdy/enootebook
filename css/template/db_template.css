@@ -48,9 +48,9 @@ body {
 }
 
 .top img {
-  width: 10%;
+  width: 35px;
   background-color: #fff;
-  border-radius: 50%;
+  border-radius: 5px;
 }
 
 /* ----------------NAV----------------- */
