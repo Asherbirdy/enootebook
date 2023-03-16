@@ -152,13 +152,6 @@ main .main-subtitle {
 
 /* -------------Banner1：輕鬆背彈字------------ */
 .main-banner1 {
-  background: rgb(189, 177, 177);
-  background: linear-gradient(
-    0deg,
-    hsl(203, 77%, 45%) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
-
   padding-top: 70px;
 }
 
