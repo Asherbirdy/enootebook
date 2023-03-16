@@ -1,0 +1,29 @@
+/*  */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;&family=Noto+Sans+TC:wght@300;&display=swap");
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+/* Button */
+.btn-orange {
+  display: inline-block;
+  background-color: orange;
+  padding: 15px 50px;
+  color: white;
+  font-size: 25px;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.btn-blue {
+  display: inline-block;
+  border: 3px solid #3c91e0;
+  color: #3c91e0;
+  padding: 15px 50px;
+
+  font-size: 25px;
+  text-decoration: none;
+  border-radius: 10px;
+}

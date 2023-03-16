@@ -1,6 +1,6 @@
 @import url("template/reset.css");
 
-/* ------------------Header-Banner---------------- */
+/* ------------------First-Banner---------------- */
 
 .top-banner {
   width: 100%;
@@ -28,6 +28,11 @@
 
 .header-banner-box a {
   font-size: 25px;
+}
+
+.header-banner-box img {
+  width: 400px;
+  margin-bottom: 20px;
 }
 
 .btn-free {
@@ -137,38 +142,49 @@ main .main-subtitle {
 
 .main-box p {
   display: block;
-  text-align: center;
+  text-align: start;
   margin: 0 auto;
   width: 500px;
-  font-size: 20px;
-  line-height: 1.6;
+  font-size: 25px;
+  line-height: 2;
 }
 
-/* ----------下方banner----------- */
+/* -------------Banner1：輕鬆背彈字------------ */
 .main-banner1 {
   background-color: #3c91e0;
+  padding-top: 180px;
+}
+
+.main-bn-innerbox {
+  width: 1440px;
+  margin: 0 auto;
+
+  background-color: #fff;
+  border-radius: 30px 30px 0px 0px;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px;
+
   gap: 50px;
 }
 
 .mb1-right {
-  color: white;
+  color: rgb(48, 48, 48);
 }
 
 .mb1-right h2 {
   font-size: 50px;
   font-weight: bold;
-  text-align: center;
+  text-align: start;
   margin-bottom: 22px;
 }
 
 .mb1-right p {
   width: 300px;
   margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 1.6;
 }
 
 .mb1-right a {
@@ -189,7 +205,7 @@ main .main-subtitle {
   background-color: #696969;
 }
 
-/* -------------Banner2----------- */
+/* -------------Banner2---------- */
 .main-banner2 {
   background-color: hsl(203, 77%, 45%);
   font-weight: bold;
@@ -214,17 +230,7 @@ main .main-subtitle {
 }
 
 .main-banner2 a {
-  padding: 15px 30px;
-  color: white;
-  background-color: orange;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 30px;
-  display: inline-block;
+  margin: 15px 0;
 }
 
 /* ---------------footer--------------- */
-footer {
-  background-color: #215d95;
-  height: 100px;
-}

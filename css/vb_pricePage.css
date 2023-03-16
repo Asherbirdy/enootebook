@@ -3,7 +3,6 @@
 /* ------------------head-bn---------------- */
 .head-bn {
   width: 100%;
-  /* background-color: bisque; */
 }
 
 .head-bn-outbox {
@@ -21,6 +20,7 @@
   text-align: center;
   margin-top: 100px;
   margin-bottom: 20px;
+  color: #3c91e0;
 }
 
 .head-bn-textbox {
@@ -39,9 +39,6 @@
 .head-bn-smallbox img {
   width: 20px;
 }
-
-/* .head-bn-smallbox p {
-} */
 
 .head-bn-btn-orange {
   margin-top: 20px;
@@ -88,17 +85,23 @@
 /* 第二個banner＿中間三個字卡 */
 .learn-all-cardbox {
   display: flex;
+
   gap: 30px;
 }
 
+/*----------放大字卡---------- */
 .learn-cardbox {
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  justify-content: center;
   padding: 60px;
   background-color: white;
   border-radius: 10px;
+}
+
+.sm-cardbox {
+  padding: 20px;
 }
 
 .learn-cardbox h4 {
@@ -110,9 +113,17 @@
   width: 100%;
 }
 
+.learn-icon-textbox-all {
+  display: flex;
+  flex-direction: column;
+}
+
 .learn-icon-textbox {
   display: flex;
   gap: 10px;
+  align-self: start;
+  justify-content: start;
+
   margin-bottom: 20px;
 }
 
@@ -121,17 +132,7 @@
 }
 
 .learn-icon-textbox p {
-  font-size: 30px;
-}
-
-.learn-cardbox a {
-  display: inline-block;
-  background-color: orange;
-  padding: 15px 50px;
-  color: white;
-  font-size: 25px;
-  text-decoration: none;
-  border-radius: 10px;
+  font-size: 20px;
 }
 
 /* ------------表格--------------- */

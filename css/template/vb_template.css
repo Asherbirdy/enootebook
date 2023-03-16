@@ -25,6 +25,7 @@ nav {
 .btn-navigation {
   display: flex;
   align-items: center;
+  margin-left: 30px;
 }
 
 .btn-navigation li a {
@@ -62,4 +63,25 @@ nav {
   color: white;
   background-color: orange;
   border-radius: 5px;
+}
+
+/* --------------Footer------------ */
+/* Footer styles */
+footer {
+  background-color: #13518b;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }

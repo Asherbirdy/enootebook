@@ -11,10 +11,6 @@
 }
 
 /* TOP */
-.top .top-greeting {
-  font-size: 30px;
-  font-weight: bold;
-}
 
 /* Content */
 
@@ -36,10 +32,4 @@
 
 .btn-exam {
   width: 10%;
-  padding: 10px 20px;
-  text-align: center;
-  background-color: orange;
-  color: white;
-  text-decoration: none;
-  border-radius: 10px;
 }
