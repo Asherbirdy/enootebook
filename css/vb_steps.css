@@ -1,4 +1,4 @@
-@import url("template/reset.css");
+@import url('template/reset.css');
 
 /* ------------------Header-Banner---------------- */
 
@@ -63,7 +63,6 @@
 
 .box-left {
   box-sizing: border-box;
-  border: 2px solid #3c91e0;
   padding: 50px;
 }
 
@@ -98,7 +97,7 @@
 }
 
 .box-text {
-  font-size: 32px;
+  font-size: 22px;
   margin-bottom: 20px;
   line-height: 1.6;
 }
