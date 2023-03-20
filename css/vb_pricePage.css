@@ -2,6 +2,7 @@
 
 /* ------------------head-bn---------------- */
 .head-bn {
+  box-sizing: border-box;
   width: 100%;
   background-image: url('../svg/03_illustrator/03_PricingPage/top_dot.svg');
   background-size: cover;
@@ -11,9 +12,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-sizing: border-box;
+
   margin: 0 auto;
-  width: 1000px;
+  width: 1200px;
 }
 
 .head-bn-title {
