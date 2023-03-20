@@ -18,6 +18,10 @@ body {
   border-radius: 10px;
 }
 
+.btn-orange:hover {
+  box-shadow: -1px -1px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
 .btn-blue {
   display: inline-block;
   border: 3px solid #3c91e0;

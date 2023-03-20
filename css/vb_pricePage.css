@@ -53,6 +53,10 @@
   margin-bottom: 100px;
 }
 
+.head-bn-btn-orange:hover {
+  box-shadow: -1px -1px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
 /* ---------------第二個banner------------- */
 .learn-ban-out {
   width: 100%;
