@@ -1,4 +1,4 @@
-@import url("template/reset.css");
+@import url('template/reset.css');
 
 /* ------------------First-Banner---------------- */
 
@@ -9,9 +9,9 @@
 
 .header-banner {
   height: 480px;
-  width: 1400px;
+  width: 1280px;
   margin: 0 auto;
-  background-image: url("../svg/03_illustrator/01_HomePage/girlUseLaptop-02.svg");
+  background-image: url('../svg/03_illustrator/01_HomePage/girlUseLaptop-02.svg');
 }
 
 .header-banner-box {

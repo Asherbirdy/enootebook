@@ -1,9 +1,9 @@
-@import url("template/reset.css");
+@import url('template/reset.css');
 
 /* ------------------head-bn---------------- */
 .head-bn {
   width: 100%;
-  background-image: url("../svg/03_illustrator/03_PricingPage/top_dot.svg");
+  background-image: url('../svg/03_illustrator/03_PricingPage/top_dot.svg');
   background-size: cover;
 }
 
@@ -13,7 +13,7 @@
   align-items: center;
 
   margin: 0 auto;
-  width: 1400px;
+  width: 1280px;
 }
 
 .head-bn-title {
@@ -61,7 +61,7 @@
 }
 
 .learn-ban-in {
-  width: 1440px;
+  width: 1280px;
   margin: 0 auto;
   padding: 100px 0;
 
@@ -143,7 +143,7 @@
 } */
 
 .compare-in {
-  width: 1440px;
+  width: 1280px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
