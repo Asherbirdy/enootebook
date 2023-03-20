@@ -2,6 +2,10 @@
 
 /* ------------------Header-Banner---------------- */
 
+body {
+  box-sizing: border-box;
+}
+
 .header-banner {
   background-color: #73a9da;
   height: 480px;
