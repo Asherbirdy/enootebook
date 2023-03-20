@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/db_exam.css" />
+    <link rel="stylesheet" href="css/db_exam_result.css" />
     <link rel="stylesheet" href="css/template/db_template.css" />
     <link rel="stylesheet" href="css/template/style_guide.css" />
     <title>Enotebook</title>
@@ -63,29 +63,52 @@
     </nav>
     <!-- ----------------儀表板------------------ -->
     <section class="dashboard">
-      <!-- 標題 -->
-
-      <!-- Content -->
       <div class="dash-content">
+        <!-- 標題 -->
         <div class="top">
-          <div class="top-greeting">模擬考試</div>
+          <div class="top-greeting">考試結果</div>
           <div class="head-box">
             <img src="image/02_Dashboard/user_photo.png" />
             <p>Asher Lien</p>
           </div>
         </div>
         <div class="overview">
-          <div class="text-box">
-            <p>1. 本次考試共有八題，一次性顯示在同一個頁面上。</p>
-            <p>2. 每個題目都是用輸入的方式回答，系統會隨機產生八個單字。</p>
-            <p>3. 每個題目顯示英文字幕的第一個字母和中文翻譯。</p>
-            <p>4. 答對加一分，答錯減一分。有一次重新回答的機會。</p>
-            <p>5. 考試時間10分鐘，時間結束後系統自動提交答案。</p>
-            <p>6. 可查看答案解析和相關單詞學習資料。</p>
+          <div class="result-box">
+            <div class="result-correctbox">
+              <h2>答對：</h2>
+              <div class="result-correctbox-item">
+                <img class="icon-m" src="svg/02_icon/icon-correct.svg" alt="" />
+                <div class="result-correctbox-textbox">
+                  <p>apple</p>
+                  <p>apple</p>
+                  <p>apple</p>
+                  <p>apple</p>
+                </div>
+              </div>
+            </div>
+            <div class="result-wrongbox">
+              <h2>答錯：</h2>
+              <div class="result-wrongbox-item-all">
+                <div class="result-wrongbox-item">
+                  <img class="icon-m" src="svg/02_icon/icon-wrong.svg" alt="" />
+                  <p>applwe 正確答案： apple</p>
+                </div>
+                <div class="result-wrongbox-item">
+                  <img class="icon-m" src="svg/02_icon/icon-wrong.svg" alt="" />
+                  <p>applwe 正確答案： apple</p>
+                </div>
+                <div class="result-wrongbox-item">
+                  <img class="icon-m" src="svg/02_icon/icon-wrong.svg" alt="" />
+                  <p>applwe 正確答案： apple</p>
+                </div>
+                <div class="result-wrongbox-item">
+                  <img class="icon-m" src="svg/02_icon/icon-wrong.svg" alt="" />
+                  <p>applwe 正確答案： apple</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <a class="btn-exam btn-orange" href="db_exam_testing.html"
-            >建立考試</a
-          >
+          <a class="btn-submit btn-orange" href="#">回首頁</a>
         </div>
       </div>
     </section>
