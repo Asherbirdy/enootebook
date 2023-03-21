@@ -63,7 +63,6 @@ nav {
   padding: 10px 14px;
   background-color: rgb(255, 255, 255);
   border-right: 1px solid rgb(224, 224, 224);
-  transition: all 0.5s ease;
 }
 
 nav .top-info {
@@ -119,7 +118,7 @@ nav .menu-items {
 }
 
 .nav-links li a:hover:before {
-  content: "";
+  content: '';
   position: absolute;
   left: -7px;
   height: 5px;
