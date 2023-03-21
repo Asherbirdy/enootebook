@@ -165,7 +165,3 @@ displayAllWordsNum();
 displayTestRecordNum();
 displayFamiliarNum();
 displayTestRecord();
-
-const obj = { written: 'grapppe', correct: 'grape' };
-
-console.log(written, correct);
