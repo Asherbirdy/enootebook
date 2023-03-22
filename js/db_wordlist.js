@@ -6,12 +6,13 @@ console.log(filterRows);
 
 //抓取資料並拆解：
 const acc = JSON.parse(localStorage.getItem('userData'));
-console.log(acc);
+
 //抓取user的單字：
 
 const { ownLibrary } = acc;
 window.addEventListener('DOMContentLoaded', loadList);
 
+//更新列表資訊：
 function updatePage() {
   output.innerHTML = '';
   loadList();
@@ -19,7 +20,6 @@ function updatePage() {
 
 //--------------自動顯示列表-------------
 function loadList() {
-  const acc = JSON.parse(localStorage.getItem('userData'));
   ownLibrary.forEach(function (__, i) {
     //從ownLibrary 每個單字的 中文 / 英文 / 熟悉度等級：
     const { chName, engName, level } = ownLibrary[i];
@@ -55,6 +55,7 @@ function loadList() {
       ownLibrary.splice(i, 1);
       console.log(acc);
       localStorage.setItem('userData', JSON.stringify(acc));
+      console.log(acc);
       updatePage();
     });
   });
