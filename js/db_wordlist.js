@@ -1,30 +1,26 @@
-//DOM
+// ---DOM---
 const input = document.querySelector('.searchbar-box');
 const output = document.querySelector('.output');
 const filterRows = document.querySelectorAll('.filter-row');
-console.log(filterRows);
 
-//抓取資料並拆解：
+// ---抓取資料並拆解---
 const acc = JSON.parse(localStorage.getItem('userData'));
-
-//抓取user的單字：
-
 const { ownLibrary } = acc;
 window.addEventListener('DOMContentLoaded', loadList);
 
-//更新列表資訊：
+// ---更新列表資訊---
 function updatePage() {
   output.innerHTML = '';
   loadList();
 }
 
-//--------------自動顯示列表-------------
+// ---自動顯示列表---
 function loadList() {
   ownLibrary.forEach(function (__, i) {
-    //從ownLibrary 每個單字的 中文 / 英文 / 熟悉度等級：
+    // 從ownLibrary 拆解出每個單字的 中文 / 英文 / 熟悉度等級：
     const { chName, engName, level } = ownLibrary[i];
 
-    //單字熟悉度等級多少就輸入多少星星icon
+    // 單字熟悉度等級多少就輸入多少星星icon
     const levelIcon = lv => {
       let output = [];
       for (let i = 0; i < level; i++) {
@@ -43,19 +39,16 @@ function loadList() {
       </a>
     </div>`;
 
-    //一定要是'beforeend'不然跑不出來
+    // 一定要是'beforeend'不然跑不出來
     output.insertAdjacentHTML('beforeend', temp);
 
+    // 刪除btn的dom:
     const deleteBtn = document.querySelector(`[data-index="${i}"]`);
-    // console.log(deleteBtn);
 
+    // 刪除行列點擊事件
     deleteBtn.addEventListener('click', function () {
-      // console.log(engName);
-      // console.log(i);
       ownLibrary.splice(i, 1);
-      console.log(acc);
       localStorage.setItem('userData', JSON.stringify(acc));
-      console.log(acc);
       updatePage();
     });
   });
