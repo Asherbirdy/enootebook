@@ -12,16 +12,14 @@ console.log(acc);
 const { ownLibrary } = acc;
 window.addEventListener('DOMContentLoaded', loadList);
 
-// 在點擊 deleteBtn 時調用此函數
 function updatePage() {
-  // 清除 output 的所有子節點
   output.innerHTML = '';
-  // 重新加載單詞列表
   loadList();
 }
 
 //--------------自動顯示列表-------------
 function loadList() {
+  const acc = JSON.parse(localStorage.getItem('userData'));
   ownLibrary.forEach(function (__, i) {
     //從ownLibrary 每個單字的 中文 / 英文 / 熟悉度等級：
     const { chName, engName, level } = ownLibrary[i];
@@ -55,13 +53,9 @@ function loadList() {
       // console.log(engName);
       // console.log(i);
       ownLibrary.splice(i, 1);
-      // console.log(acc);
+      console.log(acc);
       localStorage.setItem('userData', JSON.stringify(acc));
       updatePage();
     });
   });
 }
-
-//------------更新---------------
-
-// ---------------------點擊刪除單字---------------------
