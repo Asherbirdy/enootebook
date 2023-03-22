@@ -1,6 +1,6 @@
 'use strict';
 
-const acc = {
+const account = {
   username: 'asher',
   password: '1111',
   level: 0,
@@ -69,6 +69,20 @@ const acc = {
     },
   ],
 };
+
+//--------------------將所有資料放在Local_Storage---------------------//
+
+const insertData = function () {
+  if (!localStorage.getItem('userData')) {
+    localStorage.setItem('userData', JSON.stringify(account));
+  } else {
+    console.log('Already have data in localStorage');
+  }
+};
+
+insertData();
+
+const acc = JSON.parse(localStorage.getItem('userData'));
 
 // ---------------------- DOM ---------------------------
 const labelAllwordNum = document.querySelector('.allword');
