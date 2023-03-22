@@ -1,6 +1,6 @@
 //DOM
 const input = document.querySelector('.searchbar-box');
-const output = document.querySelector('.filter-title');
+const output = document.querySelector('.output');
 const filterRows = document.querySelectorAll('.filter-row');
 console.log(filterRows);
 
@@ -11,6 +11,14 @@ console.log(acc);
 
 const { ownLibrary } = acc;
 window.addEventListener('DOMContentLoaded', loadList);
+
+// 在點擊 deleteBtn 時調用此函數
+function updatePage() {
+  // 清除 output 的所有子節點
+  output.innerHTML = '';
+  // 重新加載單詞列表
+  loadList();
+}
 
 //--------------自動顯示列表-------------
 function loadList() {
@@ -37,26 +45,23 @@ function loadList() {
       </a>
     </div>`;
 
-    output.insertAdjacentHTML('afterend', temp);
+    //一定要是'beforeend'不然跑不出來
+    output.insertAdjacentHTML('beforeend', temp);
 
     const deleteBtn = document.querySelector(`[data-index="${i}"]`);
     // console.log(deleteBtn);
 
-    deleteBtn.addEventListener('click', function (e) {
-      console.log(engName);
-      console.log(i);
-      ownLibrary.splice(i);
-      console.log(acc);
+    deleteBtn.addEventListener('click', function () {
+      // console.log(engName);
+      // console.log(i);
+      ownLibrary.splice(i, 1);
+      // console.log(acc);
       localStorage.setItem('userData', JSON.stringify(acc));
-      // displayUI();
+      updatePage();
     });
   });
 }
 
 //------------更新---------------
-const displayUI = function () {
-  // const acc = JSON.parse(localStorage.getItem('userData'));
-  // loadList();
-};
 
 // ---------------------點擊刪除單字---------------------
