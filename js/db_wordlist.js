@@ -32,15 +32,14 @@ function rowsHtmlTemplate({ chName, engName, level }, index) {
     <div class="word">${chName}</div>
     <div class="word">
     <div class="starbox"> ${levelIcon(level)}</div>
-    <a href="#" class="icon-s icon-delete">
-    <img src="svg/02_icon/icon-wrong_grey.svg" data-index="${index}" />
-  </a></div>
+   </div>
   `;
   return html;
 }
 
 // --- 顯示列表功能 ---
 function loadList() {
+  output.innerHTML = '';
   ownLibrary.forEach((_, i) => {
     const HTML = rowsHtmlTemplate(ownLibrary[i], i);
     output.insertAdjacentHTML('beforeend', HTML);
