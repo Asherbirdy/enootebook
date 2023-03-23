@@ -4,10 +4,10 @@
 
 .dashboard {
   position: relative;
-  left: 230px;
+  left: 150px;
   /* background-color: rgb(255, 255, 255); */
   height: 100vh;
-  width: calc(100% - 230px);
+  width: calc(100% - 150px);
 }
 
 /* Content */
