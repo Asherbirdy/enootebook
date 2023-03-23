@@ -8,17 +8,17 @@ body {
 /* style setting */
 
 .icon-s {
-  width: 20px;
+  width: 12px;
 }
 
 .icon-m {
-  width: 40px;
+  width: 24px;
 }
 
 /* TOP */
 
 .top .top-greeting {
-  font-size: 30px;
+  font-size: 18px;
   font-weight: bold;
 }
 .top {
@@ -43,12 +43,12 @@ body {
 }
 
 .top p {
-  font-size: 30px;
+  font-size: 18px;
   font-weight: bold;
 }
 
 .top img {
-  width: 35px;
+  width: 21px;
   background-color: #fff;
   border-radius: 5px;
 }
@@ -59,7 +59,7 @@ nav {
   top: 0;
   left: 0;
   height: 100%;
-  width: 200px;
+  width: 120px;
   padding: 10px 14px;
   background-color: rgb(255, 255, 255);
   border-right: 1px solid rgb(224, 224, 224);
@@ -78,7 +78,7 @@ nav .top-info {
 }
 
 .logo {
-  width: 160px;
+  width: 96px;
   margin-top: 40px;
 }
 
@@ -89,21 +89,21 @@ nav .logo-image {
 }
 
 nav .logo-image img {
-  width: 40px;
+  width: 24px;
   object-fit: cover;
   display: block;
 }
 
 nav .logo-name .logo_name {
-  font-size: 22px;
+  font-size: 13px;
   font-weight: 600;
   color: rgb(56, 113, 255);
   margin-left: 14px;
 }
 
 nav .menu-items {
-  margin-top: 40px;
-  height: calc(100% - 120px);
+  margin-top: 10px;
+  height: calc(100% - 10px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -120,7 +120,7 @@ nav .menu-items {
 .nav-links li a:hover:before {
   content: '';
   position: absolute;
-  left: -7px;
+  left: -2px;
   height: 5px;
   width: 5px;
   border-radius: 50%;
@@ -128,8 +128,8 @@ nav .menu-items {
 }
 
 .menu-items li a i {
-  font-size: 24px;
-  min-width: 45px;
+  font-size: 14px;
+  min-width: 30px;
   height: 100%;
   display: flex;
   align-items: center;
@@ -137,7 +137,7 @@ nav .menu-items {
 }
 
 .link-name {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 400;
   color: grey;
   text-decoration: none;
