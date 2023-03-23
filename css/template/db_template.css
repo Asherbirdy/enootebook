@@ -27,7 +27,7 @@ body {
   align-items: center;
   justify-content: space-between;
 
-  padding: 40px 0;
+  padding-bottom: 40px;
 }
 
 .dashboard .dash-content {
