@@ -2,6 +2,7 @@
 const search = document.querySelector('.searchbar');
 const output = document.querySelector('.output');
 const filterRows = document.querySelectorAll('.filter-row');
+const btn_sort = document.querySelector('.btn_sort');
 
 // ---抓取資料並拆解---
 const acc = JSON.parse(localStorage.getItem('userData'));
@@ -60,3 +61,30 @@ function filter(e) {
     });
   }
 }
+// --- 熟悉度排序 ---
+let btn_sort_switch;
+btn_sort.addEventListener('click', function () {
+  btn_sort_switch = !btn_sort_switch;
+  output.innerHTML = '';
+  search.value = '';
+
+  if (btn_sort_switch === false) {
+    const sortBigToSmallArr = ownLibrary
+      .slice()
+      .sort((a, b) => (a.level > b.level ? -1 : 1));
+    sortBigToSmallArr.forEach((item, i) => {
+      const HTML = rowsHtmlTemplate(sortBigToSmallArr[i], i);
+      output.insertAdjacentHTML('beforeend', HTML);
+    });
+    console.log(ownLibrary);
+  } else {
+    const sortNewToOldArr = ownLibrary
+      .slice()
+      .sort((a, b) => (a.level > b.level ? 1 : -1));
+    sortNewToOldArr.forEach((item, i) => {
+      const HTML = rowsHtmlTemplate(sortNewToOldArr[i], i);
+      output.insertAdjacentHTML('beforeend', HTML);
+    });
+    console.log(ownLibrary);
+  }
+});
