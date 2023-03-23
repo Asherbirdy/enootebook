@@ -100,3 +100,8 @@
 .border-right {
   border-right: 3px solid white;
 }
+
+.output {
+  height: 400px;
+  overflow: scroll;
+}

@@ -1,5 +1,5 @@
 // ---DOM---
-const input = document.querySelector('.searchbar-box');
+const search = document.querySelector('.searchbar');
 const output = document.querySelector('.output');
 const filterRows = document.querySelectorAll('.filter-row');
 
@@ -7,49 +7,3 @@ const filterRows = document.querySelectorAll('.filter-row');
 const acc = JSON.parse(localStorage.getItem('userData'));
 const { ownLibrary } = acc;
 window.addEventListener('DOMContentLoaded', loadList);
-
-// ---更新列表資訊---
-function updatePage() {
-  output.innerHTML = '';
-  loadList();
-}
-
-// ---自動顯示列表---
-function loadList() {
-  ownLibrary.forEach(function (__, i) {
-    // 從ownLibrary 拆解出每個單字的 中文 / 英文 / 熟悉度等級：
-    const { chName, engName, level } = ownLibrary[i];
-
-    // 單字熟悉度等級多少就輸入多少星星icon
-    const levelIcon = lv => {
-      let output = [];
-      for (let i = 0; i < level; i++) {
-        output.push('<img class="icon-s" src="svg/02_icon/icon-star.svg" />');
-      }
-      return output.join('');
-    };
-
-    let temp = `<div class="filter-row">
-    <div class="word">${engName}</div>
-    <div class="word">${chName}</div>
-    <div class="word">
-      <div class="starbox"> ${levelIcon(level)}</div>
-      <a href="#" class="icon-s icon-delete">
-        <img src="svg/02_icon/icon-wrong_grey.svg" data-index="${i}" />
-      </a>
-    </div>`;
-
-    // 一定要是'beforeend'不然跑不出來
-    output.insertAdjacentHTML('beforeend', temp);
-
-    // 刪除btn的dom:
-    const deleteBtn = document.querySelector(`[data-index="${i}"]`);
-
-    // 刪除行列點擊事件
-    deleteBtn.addEventListener('click', function () {
-      ownLibrary.splice(i, 1);
-      localStorage.setItem('userData', JSON.stringify(acc));
-      updatePage();
-    });
-  });
-}
