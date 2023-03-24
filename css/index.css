@@ -68,13 +68,14 @@
 
 .three-section li {
   display: flex;
+  align-items: center;
   padding: auto 100px;
   margin: 80px 60px;
   color: #215d95;
 }
 
 .three-section li h3 {
-  font-size: 70px;
+  font-size: 42px;
   font-weight: bold;
   margin-left: 20px;
 }
@@ -95,7 +96,7 @@ main {
 }
 
 main .main-title {
-  font-size: 40px;
+  font-size: 24px;
   text-align: center;
   margin-top: 80px;
   margin-bottom: 20px;
@@ -105,7 +106,7 @@ main .main-title {
 
 main .main-subtitle {
   color: grey;
-  font-size: 35px;
+  font-size: 21px;
   text-align: center;
   margin-bottom: 60px;
 }
@@ -128,7 +129,7 @@ main .main-subtitle {
 
 .main-box h3 {
   text-align: center;
-  font-size: 30px;
+  font-size: 18px;
   color: #215d95;
   font-weight: bold;
   margin-top: 20px;
@@ -138,8 +139,8 @@ main .main-subtitle {
 .main-box img {
   display: block;
   margin: 0 auto;
-  width: 500px;
-  height: 400px;
+  width: 300px;
+  height: 240px;
 
   margin-bottom: 20px;
 }
@@ -148,8 +149,8 @@ main .main-subtitle {
   display: block;
   text-align: start;
   margin: 0 auto;
-  width: 500px;
-  font-size: 25px;
+  width: 300px;
+  font-size: 15px;
   line-height: 2;
 }
 
@@ -179,7 +180,7 @@ main .main-subtitle {
 }
 
 .mb1-right h2 {
-  font-size: 50px;
+  font-size: 30px;
   font-weight: bold;
   text-align: start;
   margin-bottom: 22px;
@@ -188,7 +189,7 @@ main .main-subtitle {
 .mb1-right p {
   width: 300px;
   margin-bottom: 20px;
-  font-size: 20px;
+  font-size: 12px;
   line-height: 1.6;
 }
 
@@ -205,7 +206,7 @@ main .main-subtitle {
 }
 
 .main-banner1 img {
-  width: 800px;
+  width: 480px;
 }
 
 /* -------------Banner2---------- */
@@ -228,12 +229,12 @@ main .main-subtitle {
 .main-banner2 h3 {
   text-align: center;
   line-height: normal;
-  font-size: 50px;
+  font-size: 30px;
   color: white;
 }
 
 .main-banner2 a {
-  margin: 15px 0;
+  margin: 9px 0;
 }
 
 /* ---------------footer--------------- */
