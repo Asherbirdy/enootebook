@@ -6,11 +6,6 @@ body {
   box-sizing: border-box;
 }
 
-.header-banner {
-  background-color: #73a9da;
-  height: 480px;
-}
-
 .header-banner-box {
   display: inline-block;
   margin-top: 150px;
@@ -18,14 +13,14 @@ body {
 }
 
 .header-banner-box h1 {
-  font-size: 50px;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 20px;
   color: white;
 }
 
 .header-banner-box a {
-  font-size: 25px;
+  font-size: 15px;
 }
 
 .btn-free {
@@ -56,12 +51,12 @@ body {
 }
 
 .title {
-  font-size: 45px;
+  font-size: 27px;
   font-weight: bold;
   text-align: center;
 
   margin-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 30px;
   color: #3c91e0;
 }
 
@@ -73,11 +68,11 @@ body {
 .stepbox {
   display: flex;
   gap: 30px;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 }
 
 .box-step {
-  font-size: 60px;
+  font-size: 36px;
   font-weight: bold;
   text-align: start;
   margin-top: 20px;
@@ -90,7 +85,7 @@ body {
 }
 
 .sub-title {
-  font-size: 45px;
+  font-size: 27px;
   margin-bottom: 20px;
   color: #3c91e0;
   font-weight: bold;
@@ -101,7 +96,7 @@ body {
 }
 
 .box-text {
-  font-size: 22px;
+  font-size: 19px;
   margin-bottom: 20px;
   line-height: 1.6;
 }
