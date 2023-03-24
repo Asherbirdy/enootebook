@@ -1,9 +1,7 @@
 'use strict';
 
 const account = {
-  username: 'asher',
-  password: '1111',
-  level: 0,
+  username: 'Asher Lien',
   ownLibrary: [
     { chName: '車', engName: 'car', level: 4 },
     { chName: '房子', engName: 'house', level: 3 },
@@ -135,12 +133,8 @@ const account = {
       ],
     },
     {
-      yourCorrectAnswer: ['strawberry', 'giraffe', 'tiger', 'apple'],
+      yourCorrectAnswer: ['strawberry', 'giraffe', 'tiger', 'apple', 'grape'],
       yourWrongAnswer: [
-        {
-          written: 'grapppe',
-          correct: 'grape',
-        },
         {
           written: 'watermalon',
           correct: 'watermelon',
@@ -158,6 +152,8 @@ const account = {
   ],
 };
 
+//-----------------先清楚local_Storage
+localStorage.clear();
 //--------------------將所有資料放在Local_Storage---------------------//
 
 const insertData = function () {
