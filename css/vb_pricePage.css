@@ -16,7 +16,7 @@
 }
 
 .head-bn-title {
-  font-size: 50px;
+  font-size: 30px;
   font-weight: bold;
   text-align: center;
   margin-top: 100px;
@@ -38,7 +38,7 @@
 }
 
 .head-bn-smallbox img {
-  width: 20px;
+  width: 12px;
 }
 
 .head-bn-btn-orange {
@@ -49,7 +49,7 @@
   color: white;
 
   border-radius: 10px;
-  font-size: 30px;
+  font-size: 24px;
   margin-bottom: 100px;
 }
 
@@ -75,14 +75,14 @@
 }
 
 .learn-ban-in h2 {
-  font-size: 50px;
+  font-size: 30px;
   color: white;
   margin-bottom: 50px;
   font-weight: bold;
 }
 
 .learn-ban-in h3 {
-  font-size: 30px;
+  font-size: 24px;
   color: white;
   padding-bottom: 60px;
 }
@@ -90,8 +90,7 @@
 /* 第二個banner＿中間三個字卡 */
 .learn-all-cardbox {
   display: flex;
-
-  gap: 30px;
+  gap: 50px;
 }
 
 /*----------放大字卡---------- */
@@ -100,22 +99,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 60px;
   background-color: white;
   border-radius: 10px;
-}
-
-.sm-cardbox {
-  padding: 20px;
+  padding: 20px 0;
 }
 
 .learn-cardbox h4 {
-  font-size: 40px;
+  font-size: 24px;
   color: #3c91e0;
   font-weight: bold;
 }
 .learn-cardbox img {
-  width: 100%;
+  width: 60%;
 }
 
 .learn-icon-textbox-all {
@@ -133,11 +128,11 @@
 }
 
 .learn-icon-textbox img {
-  width: 30px;
+  width: 18px;
 }
 
 .learn-icon-textbox p {
-  font-size: 20px;
+  font-size: 12px;
   align-self: center;
 }
 
@@ -155,7 +150,7 @@
 }
 
 .compare-title {
-  font-size: 50px;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 30px;
   color: #3c91e0;
@@ -170,8 +165,8 @@
 table {
   border-collapse: collapse;
   width: 100%;
-  font-size: 40px;
-  outline: 1px solid rgb(33, 57, 82);
+  font-size: 24px;
+  outline: 0px solid rgb(33, 57, 82);
   border-radius: 15px;
   overflow: hidden;
 
@@ -180,7 +175,7 @@ table {
 
 th,
 td {
-  padding: 50px 38px;
+  padding: 30px 38px;
   text-align: center;
   outline: 1px solid rgb(128, 192, 255);
 }

@@ -9,11 +9,11 @@ body {
 .btn-orange {
   display: inline-block;
   background-color: orange;
-  padding: 15px 50px;
+  padding: 9px 30px;
   color: white;
-  font-size: 25px;
+  font-size: 19px;
   text-decoration: none;
-  border-radius: 10px;
+  border-radius: 6px;
 }
 
 .btn-orange:hover {
@@ -22,11 +22,11 @@ body {
 
 .btn-blue {
   display: inline-block;
-  border: 3px solid #3c91e0;
+  outline: 1px solid #3c91e0;
   color: #3c91e0;
-  padding: 15px 50px;
+  padding: 9px 30px;
 
-  font-size: 25px;
+  font-size: 19px;
   text-decoration: none;
-  border-radius: 10px;
+  border-radius: 6px;
 }
