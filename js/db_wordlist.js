@@ -93,12 +93,12 @@ btn_sort.addEventListener('click', function () {
   }
 });
 
-//---------
-
+//--- 新增單字 ---
 btn_addWord.addEventListener('click', function () {
   modal.style.display = 'block';
 });
 
+//--- 關掉新增單字視窗 ---
 window.addEventListener('click', function (event) {
   if (event.target == modal) {
     modal.style.display = 'none';

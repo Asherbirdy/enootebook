@@ -40,7 +40,6 @@
 .top-text-box {
   display: flex;
   justify-content: space-between;
-
   font-size: 12px;
 }
 .top-text-box .btn-text a {
@@ -60,7 +59,7 @@
   justify-content: space-between;
   width: 100%;
 
-  background-color: rgb(0, 155, 238);
+  background-color: #009bee;
   margin-top: 24px;
   padding: 20px 0;
   color: white;
@@ -85,7 +84,7 @@
   position: absolute;
   right: 0;
   top: 0;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .word {
@@ -104,6 +103,58 @@
 .output {
   height: 600px;
   overflow: scroll;
+}
+
+/* 左右欄位： */
+.main-content {
+  width: 100%;
+  display: flex;
+  gap: 14px;
+}
+
+.mc-leftbox {
+  width: 70%;
+}
+
+.mc-rightbox {
+  width: 30%;
+}
+
+.notebook_output {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.folder {
+  width: 80%;
+}
+
+.notes_box {
+  display: flex;
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.notes {
+  width: 25%;
+}
+
+.top-text-box2 {
+  display: flex;
+  justify-content: end;
+  font-size: 12px;
+}
+.btn-text2 a {
+  text-decoration: none;
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(57, 152, 219);
+  color: white;
+  border-radius: 10px;
 }
 
 /* 彈出視窗 */
@@ -133,4 +184,84 @@
 .modal-content h3 {
   text-align: center;
   margin-bottom: 10px;
+}
+
+.notes_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.notes_data_box {
+  display: flex;
+  gap: 40px;
+  margin-top: 10px;
+}
+
+.notes_data_box label p {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  color: #a5a5a5;
+}
+
+.notes_data_box label h4 {
+  font-size: 80px;
+  font-weight: 500;
+}
+
+.choose_notebook {
+  display: inline-block;
+  padding: 30px 0;
+  margin-top: 25px;
+  border-top: 1px solid rgb(201, 201, 201);
+  color: #a5a5a5;
+  width: 95%;
+  text-align: center;
+}
+
+.all_notebooks {
+  display: block;
+
+  padding: 20px 0;
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.notebook_box {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+
+.sm_notebook {
+  padding: 10px 40px;
+  margin: 0 4px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn_outline {
+  border-radius: 5px;
+  outline: 2px solid #009bee;
+  color: #009bee;
+}
+
+.btn_color {
+  background-color: #009bee;
+  border-radius: 5px;
+  color: white;
+}
+
+.btn_grey {
+  border-radius: 5px;
+  color: #009bee;
+  padding: 10px 60px;
+  font-weight: 700;
+  background-color: #ebf5ff;
 }
