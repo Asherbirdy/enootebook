@@ -111,7 +111,28 @@ const account = {
     { chName: '性別', engName: 'gender', level: 4 },
     { chName: '身份', engName: 'identity', level: 3 },
   ],
-
+  notebooks: [
+    {
+      notebookName: '多益',
+      notebookLib: ['water', 'food', 'car'],
+    },
+    {
+      notebookName: '期中考',
+      notebookLib: ['fire', 'earth', 'hone'],
+    },
+    {
+      notebookName: '多益',
+      notebookLib: ['fairness', 'law', 'economy'],
+    },
+    {
+      notebookName: '學校',
+      notebookLib: ['democracy', 'spirituality', 'family'],
+    },
+    {
+      notebookName: '線上課程',
+      notebookLib: ['crime', 'business', 'romance'],
+    },
+  ],
   testRecord: [
     {
       yourCorrectAnswer: ['apple', 'leopard', 'tiger', 'rhinoceros', 'monkey'],
