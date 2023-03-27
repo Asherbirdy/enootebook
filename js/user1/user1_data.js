@@ -1,6 +1,7 @@
 const account = {
   username: 'Asher Lien',
   ownLibrary: [
+    // 總單字庫：
     { chName: '車', engName: 'car', level: 4 },
     { chName: '房子', engName: 'house', level: 3 },
     { chName: '食物', engName: 'food', level: 2 },
@@ -111,26 +112,48 @@ const account = {
     { chName: '性別', engName: 'gender', level: 4 },
     { chName: '身份', engName: 'identity', level: 3 },
   ],
+  // 小筆記本
   notebooks: [
     {
       notebookName: '多益',
-      notebookLib: ['water', 'food', 'car'],
+      notebookLib: [
+        { chName: '車', engName: 'car', level: 4 },
+        { chName: '房子', engName: 'house', level: 3 },
+        { chName: '食物', engName: 'food', level: 2 },
+      ],
     },
     {
       notebookName: '期中考',
-      notebookLib: ['fire', 'earth', 'hone'],
+      notebookLib: [
+        { chName: '水', engName: 'water', level: 1 },
+        { chName: '火', engName: 'fire', level: 4 },
+        { chName: '地球', engName: 'earth', level: 3 },
+      ],
     },
     {
       notebookName: '多益',
-      notebookLib: ['fairness', 'law', 'economy'],
+      notebookLib: [
+        { chName: '地球', engName: 'earth', level: 3 },
+        { chName: '天空', engName: 'sky', level: 2 },
+        { chName: '太陽', engName: 'sun', level: 5 },
+      ],
     },
     {
       notebookName: '學校',
-      notebookLib: ['democracy', 'spirituality', 'family'],
+      notebookLib: [
+        { chName: '星星', engName: 'star', level: 3 },
+        { chName: '風', engName: 'wind', level: 2 },
+        { chName: '雲', engName: 'cloud', level: 1 },
+      ],
     },
     {
       notebookName: '線上課程',
-      notebookLib: ['crime', 'business', 'romance'],
+      notebookLib: [
+        { chName: '風', engName: 'wind', level: 2 },
+        { chName: '雲', engName: 'cloud', level: 1 },
+        { chName: '雨', engName: 'rain', level: 4 },
+        { chName: '雪', engName: 'snow', level: 3 },
+      ],
     },
   ],
   testRecord: [

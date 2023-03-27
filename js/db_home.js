@@ -120,7 +120,7 @@ const account = {
     },
     {
       notebookName: '期中考',
-      notebookLib: ['fire', 'earth', 'hone'],
+      notebookLib: ['fire', 'earth', 'home'],
     },
     {
       notebookName: '多益',
