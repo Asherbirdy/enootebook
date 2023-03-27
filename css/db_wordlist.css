@@ -101,8 +101,9 @@
 }
 
 .output {
-  height: 600px;
+  height: 480px;
   overflow: scroll;
+  background-color: white;
 }
 
 /* 左右欄位： */
@@ -196,6 +197,7 @@
   display: flex;
   gap: 40px;
   margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 .notes_data_box label p {

@@ -13,10 +13,20 @@ search.addEventListener('input', filter);
 
 // ---抓取資料並拆解---
 const acc = JSON.parse(localStorage.getItem('userData'));
+console.log(acc);
 //1.單字庫：
 const { ownLibrary } = acc;
+
+//切換動態單字庫：：
+let lib;
+lib = ownLibrary;
+console.log(lib);
+console.log(acc);
+lib = acc.notebooks[0].notebookLib;
+lib = acc.notebooks[1].notebookLib;
+// lib = ownLibrary;
 //2.把所有英文字放到一個陣列
-const engNamesArr = ownLibrary.map(words => words.engName);
+const engNamesArr = lib.map(words => words.engName);
 
 //--- 列表HTML模板 ---
 function rowsHtmlTemplate({ chName, engName, level }, index) {
@@ -44,8 +54,8 @@ function rowsHtmlTemplate({ chName, engName, level }, index) {
 // --- 顯示列表功能 ---
 function loadList() {
   output.innerHTML = '';
-  ownLibrary.forEach((_, i) => {
-    const HTML = rowsHtmlTemplate(ownLibrary[i], i);
+  lib.forEach((_, i) => {
+    const HTML = rowsHtmlTemplate(lib[i], i);
     output.insertAdjacentHTML('beforeend', HTML);
   });
 }
@@ -59,7 +69,7 @@ function filter(e) {
   if (typing.length > 0) {
     typing.forEach((item, i) => {
       const index = engNamesArr.indexOf(item);
-      const HTML = rowsHtmlTemplate(ownLibrary[index], index);
+      const HTML = rowsHtmlTemplate(lib[index], index);
       output.insertAdjacentHTML('beforeend', HTML);
     });
   } else {
@@ -75,7 +85,7 @@ btn_sort.addEventListener('click', function () {
   search.value = '';
 
   if (btn_sort_switch === false) {
-    const sortBigToSmallArr = ownLibrary
+    const sortBigToSmallArr = lib
       .slice()
       .sort((a, b) => (a.level > b.level ? -1 : 1));
     sortBigToSmallArr.forEach((item, i) => {
@@ -83,7 +93,7 @@ btn_sort.addEventListener('click', function () {
       output.insertAdjacentHTML('beforeend', HTML);
     });
   } else {
-    const sortNewToOldArr = ownLibrary
+    const sortNewToOldArr = lib
       .slice()
       .sort((a, b) => (a.level > b.level ? 1 : -1));
     sortNewToOldArr.forEach((item, i) => {
