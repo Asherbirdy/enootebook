@@ -212,9 +212,8 @@
 
 .choose_notebook {
   display: inline-block;
-  padding: 30px 0;
-  margin-top: 25px;
-  border-top: 1px solid rgb(201, 201, 201);
+  padding: 10px 0;
+
   color: #a5a5a5;
   width: 95%;
   text-align: center;
@@ -223,11 +222,11 @@
 .all_notebooks {
   display: block;
 
-  padding: 20px 0;
+  padding: 10px 0;
   width: 100%;
   text-decoration: none;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .notebook_box {
@@ -237,13 +236,6 @@
   align-items: center;
   justify-content: center;
   padding-bottom: 40px;
-}
-
-.sm_notebook {
-  padding: 10px 40px;
-  margin: 0 4px;
-  text-decoration: none;
-  text-align: center;
 }
 
 .btn_outline {
@@ -261,7 +253,7 @@
 .btn_grey {
   border-radius: 5px;
   color: #009bee;
-  padding: 10px 60px;
+  padding: 10px 0;
   font-weight: 700;
   background-color: #ebf5ff;
 }
