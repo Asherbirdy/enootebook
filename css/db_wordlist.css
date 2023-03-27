@@ -18,7 +18,7 @@
 }
 
 .searchbar {
-  width: calc(100% - 50px - 93px);
+  width: calc(100% - 50px - 283px);
   padding: 12px;
 
   font-size: 15px;
@@ -218,7 +218,7 @@
 
   color: #a5a5a5;
   width: 95%;
-  text-align: center;
+  text-align: left;
 }
 
 .all_notebooks {
