@@ -4,26 +4,30 @@ const output = document.querySelector('.output'); //放列表的父層
 const btn_sort = document.querySelector('.btn_sort'); //排序按鈕
 const btn_addWord = document.querySelector('.btn_add'); //新增單字 按鈕
 const modal = document.getElementById('pop_up_addword'); //彈出視窗
+const notebooks = document.querySelector('.notes_box'); //小筆記簿
 
 // ---監聽---
 //1.顯示頁面：
 window.addEventListener('DOMContentLoaded', loadList);
+window.addEventListener('DOMContentLoaded', loadnotebook);
 //2.過濾監聽：
 search.addEventListener('input', filter);
 
 // ---抓取資料並拆解---
 const acc = JSON.parse(localStorage.getItem('userData'));
-console.log(acc);
+// console.log(acc);
 //1.單字庫：
 const { ownLibrary } = acc;
 
 //切換動態單字庫：：
 let lib;
 lib = ownLibrary;
-console.log(lib);
+// console.log(lib);
+
+// lib = acc.notebooks[0].notebookLib;
+// lib = acc.notebooks[1].notebookLib;
+
 console.log(acc);
-lib = acc.notebooks[0].notebookLib;
-lib = acc.notebooks[1].notebookLib;
 // lib = ownLibrary;
 //2.把所有英文字放到一個陣列
 const engNamesArr = lib.map(words => words.engName);
@@ -102,6 +106,16 @@ btn_sort.addEventListener('click', function () {
     });
   }
 });
+
+// --- 列出所有小筆記簿按鈕
+function loadnotebook() {
+  acc.notebooks.forEach((item, i) => {
+    console.log(item.notebookName);
+    let html = `<a class="all_notebooks btn_outline" href="#">${item.notebookName}</a>`;
+    console.log(html);
+    notebooks.insertAdjacentHTML('beforeend', html);
+  });
+}
 
 //--- 新增單字 ---
 btn_addWord.addEventListener('click', function () {
