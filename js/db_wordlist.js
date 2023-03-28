@@ -3,8 +3,11 @@ const search = document.querySelector('.searchbar'); //搜尋input
 const output = document.querySelector('.output'); //放列表的父層
 const btn_sort = document.querySelector('.btn_sort'); //排序按鈕
 const btn_addWord = document.querySelector('.btn_add'); //新增單字 按鈕
-const modal = document.getElementById('pop_up_addword'); //彈出視窗
 const notebooks = document.querySelector('.notes_box'); //小筆記簿
+const modal = document.getElementById('pop_up_addword'); //彈出視窗
+const wordLength = document.querySelector('.wordLength'); // 單字數量
+const wordFamiliar = document.querySelector('.wordFamiliar'); // 平均熟悉度
+const all_notebook = document.querySelector('.all_notebooks');
 
 // ---監聽---
 //1.顯示頁面：
@@ -16,21 +19,18 @@ search.addEventListener('input', filter);
 // ---抓取資料並拆解---
 const acc = JSON.parse(localStorage.getItem('userData'));
 // console.log(acc);
-//1.單字庫：
+//1.總單字庫：
 const { ownLibrary } = acc;
 
-//切換動態單字庫：：
-let lib;
-lib = ownLibrary;
-// console.log(lib);
+//切換動態單字庫：預設
+let lib = ownLibrary;
 
-// lib = acc.notebooks[0].notebookLib;
-// lib = acc.notebooks[1].notebookLib;
-
-console.log(acc);
-// lib = ownLibrary;
-//2.把所有英文字放到一個陣列
-const engNamesArr = lib.map(words => words.engName);
+//所有單字放到一個陣列：
+let engNamesArr;
+const currentNotebook = function () {
+  engNamesArr = lib.map(words => words.engName);
+};
+currentNotebook();
 
 //--- 列表HTML模板 ---
 function rowsHtmlTemplate({ chName, engName, level }, index) {
@@ -83,7 +83,8 @@ function filter(e) {
 }
 // --- 熟悉度排序 ---
 let btn_sort_switch;
-btn_sort.addEventListener('click', function () {
+btn_sort.addEventListener('click', function (e) {
+  e.preventDefault();
   btn_sort_switch = !btn_sort_switch;
   output.innerHTML = '';
   search.value = '';
@@ -110,11 +111,14 @@ btn_sort.addEventListener('click', function () {
 // --- 列出所有小筆記簿按鈕
 function loadnotebook() {
   acc.notebooks.forEach((item, i) => {
-    console.log(item.notebookName);
-    let html = `<a class="all_notebooks btn_outline" href="#">${item.notebookName}</a>`;
-    console.log(html);
+    let html = `<a id="notebooksLink" class="small_notebooks btn_outline" notebooks_data="${i}" href="#">${item.notebookName} </a>`;
     notebooks.insertAdjacentHTML('beforeend', html);
   });
+  //如果小筆記本小於6本，要有新增的筆記本
+  if (acc.notebooks.length < 6) {
+    const lastHTML = ` <a class=" all_notebooks btn_grey" href="#">+</a> `;
+    notebooks.insertAdjacentHTML('beforeend', lastHTML);
+  }
 }
 
 //--- 新增單字 ---
@@ -128,3 +132,83 @@ window.addEventListener('click', function (event) {
     modal.style.display = 'none';
   }
 });
+
+// --- 總筆記簿 和 小筆記本 的按鈕 ---
+document.addEventListener('click', function (e) {
+  //點擊：所有筆記簿  並刪掉其他a標籤的btn_color
+  if (e.target.classList.contains('all_notebooks')) {
+    e.preventDefault();
+    // 取得所有 small_notebooks 的節點
+    const smallNotebooks = document.querySelectorAll('.small_notebooks');
+
+    // 刪掉其他的 btn_color class
+    smallNotebooks.forEach(notebook => {
+      if (notebook.classList.contains('btn_color')) {
+        notebook.classList.remove('btn_color');
+        notebook.classList.add('btn_outline');
+      }
+    });
+
+    // 留下 all_notebooks 的 btn_color class
+    e.target.classList.add('btn_color');
+  }
+
+  if (e.target.classList.contains('all_notebooks')) {
+    lib = ownLibrary;
+    loadList();
+    currentNotebook();
+    currentLibData();
+  }
+
+  //點擊：小筆記本
+  if (e.target.classList.contains('small_notebooks')) {
+    e.preventDefault();
+    // 如果點擊小筆記本 取消大筆記本的樣式
+    if (all_notebook.classList.contains('btn_color')) {
+      all_notebook.classList.remove('btn_color');
+      all_notebook.classList.add('btn_outline');
+    }
+    //取得id 的數值 //0 , 1
+    let notebooksData = e.target.getAttribute('notebooks_data');
+    //點擊切換lib
+    lib = acc.notebooks[notebooksData].notebookLib;
+
+    //切換CSS樣式: 將其他按鈕樣式取消：
+    // 將目前點擊的按鈕設定成 btn_color
+    e.target.classList.add('btn_color');
+    // 將其他按鈕設定成 btn_outline
+    const allNotebooks = document.querySelectorAll('.small_notebooks');
+    allNotebooks.forEach(notebook => {
+      if (notebook !== e.target) {
+        notebook.classList.remove('btn_color');
+        notebook.classList.add('btn_outline');
+      }
+    });
+
+    //更新頁面：
+    loadList();
+    currentNotebook();
+    currentLibData();
+  }
+});
+
+//顯示目前lib的單字數量 和 平均熟悉度：
+function currentLibData() {
+  wordLength.textContent = '';
+  wordFamiliar.textContent = '';
+  console.log(wordLength.textContent);
+  console.log(wordFamiliar.textContent);
+
+  const libLength = lib.length;
+  const totalLevel =
+    lib.reduce((sum, item) => sum + item.level, 0) / lib.length;
+  const familiarNum =
+    Number((totalLevel + '')[2]) === 0 || (totalLevel + '').length === 1
+      ? (totalLevel + '')[0]
+      : Math.floor(totalLevel * 10) / 10;
+  wordLength.textContent = libLength;
+  wordFamiliar.textContent = familiarNum;
+}
+currentLibData();
+
+//當點擊小筆記簿系列取消
