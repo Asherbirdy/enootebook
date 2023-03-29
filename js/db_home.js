@@ -148,15 +148,6 @@ const account = {
         { chName: '雲', engName: 'cloud', level: 1 },
       ],
     },
-    {
-      notebookName: '線上課程',
-      notebookLib: [
-        { chName: '風', engName: 'wind', level: 2 },
-        { chName: '雲', engName: 'cloud', level: 1 },
-        { chName: '雨', engName: 'rain', level: 4 },
-        { chName: '雪', engName: 'snow', level: 3 },
-      ],
-    },
   ],
   testRecord: [
     {
@@ -197,7 +188,6 @@ const account = {
 };
 
 //--- 先清除local_Storage ---
-localStorage.clear();
 
 //--- 將所有資料放在Local_Storage ---//
 
