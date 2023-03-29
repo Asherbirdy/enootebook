@@ -70,6 +70,14 @@ function loadList() {
   });
 }
 
+//更新行列的ＵＩ newLib是導入lib陣列：
+function updateUIrows(newLib) {
+  newLib.forEach((item, i) => {
+    const HTML = rowsHtmlTemplate(newLib[i], i);
+    output.insertAdjacentHTML('beforeend', HTML);
+  });
+}
+
 // --- 搜尋功能 ---
 function filter(e) {
   output.innerHTML = '';
@@ -90,99 +98,69 @@ function filter(e) {
     output.insertAdjacentHTML('beforeend', nullHtml);
   }
 }
-// --- 熟悉度排序 ---
-let btn_sort_switch;
-btn_sort.addEventListener('click', function (e) {
-  e.preventDefault();
-  btn_sort_switch = !btn_sort_switch;
+
+//  ----   BUTTON 及 現在排序 更新畫面函式 和 preDefault
+function updateCurrentSortStr(str) {
   output.innerHTML = '';
   search.value = '';
   curSortStr.textContent = '';
-  curSortStr.textContent = '排序 ：「 熟悉度排序 」 ';
+  curSortStr.textContent = `${str}`;
+}
+
+// --- BUTTON-熟悉度排序 ---
+let btn_sort_switch;
+btn_sort.addEventListener('click', function (e) {
+  e.preventDefault();
+  updateCurrentSortStr('排序 ：「 熟悉度排序 」');
+  btn_sort_switch = !btn_sort_switch;
 
   if (btn_sort_switch === false) {
     const sortBigToSmallArr = lib
       .slice()
       .sort((a, b) => (a.level > b.level ? -1 : 1));
-    sortBigToSmallArr.forEach((item, i) => {
-      const HTML = rowsHtmlTemplate(sortBigToSmallArr[i], i);
-      output.insertAdjacentHTML('beforeend', HTML);
-    });
+    updateUIrows(sortBigToSmallArr);
   } else {
     const sortNewToOldArr = lib
       .slice()
       .sort((a, b) => (a.level > b.level ? 1 : -1));
-    sortNewToOldArr.forEach((item, i) => {
-      const HTML = rowsHtmlTemplate(sortNewToOldArr[i], i);
-      output.insertAdjacentHTML('beforeend', HTML);
-    });
+    updateUIrows(sortNewToOldArr);
   }
 });
 
-// --- A-Z排序 ---
+// ---  BUTTON-A-Z排序 ---
 let btn_aToZ_switch;
 btn_AToZ.addEventListener('click', function (e) {
   e.preventDefault();
   btn_aToZ_switch = !btn_aToZ_switch;
-  output.innerHTML = '';
-  search.value = '';
+  updateCurrentSortStr('排序 ：「 英文排序 」 ');
 
-  curSortStr.textContent = '';
-  curSortStr.textContent = '排序 ：「 英文排序 」 ';
   if (btn_aToZ_switch === true) {
     const aToZsort = lib
       .slice()
       .sort((a, b) => a.engName.localeCompare(b.engName));
-    console.log(aToZsort);
-
-    aToZsort.forEach((item, i) => {
-      const HTML = rowsHtmlTemplate(aToZsort[i], i);
-      output.insertAdjacentHTML('beforeend', HTML);
-    });
+    updateUIrows(aToZsort);
   } else {
     const zToAsort = lib
       .slice()
       .sort((a, b) => b.engName.localeCompare(a.engName));
-
-    zToAsort.forEach((item, i) => {
-      const HTML = rowsHtmlTemplate(zToAsort[i], i);
-      output.insertAdjacentHTML('beforeend', HTML);
-    });
+    updateUIrows(zToAsort);
   }
 });
 
-// --- 新舊排序： ---
+// ---  BUTTON-新舊排序： ---
 let btn_NewToOld_switch;
 btn_NewToOld.addEventListener('click', function (e) {
   e.preventDefault();
   btn_NewToOld_switch = !btn_NewToOld_switch;
-  console.log(btn_NewToOld_switch ? 'true' : 'false');
-  output.innerHTML = '';
-  search.value = '';
-  curSortStr.textContent = '';
-  curSortStr.textContent = '排序 ：「 新舊排序 」 ';
+  updateCurrentSortStr('排序 ：「 新舊排序 」」 ');
 
   if (btn_NewToOld_switch === true) {
     const newLib = lib.slice().reverse();
-    newLib.forEach((item, i) => {
-      const HTML = rowsHtmlTemplate(newLib[i], i);
-      output.insertAdjacentHTML('beforeend', HTML);
-    });
+    updateUIrows(newLib);
   } else {
     let lib = ownLibrary;
-    lib.forEach((item, i) => {
-      const HTML = rowsHtmlTemplate(lib[i], i);
-      output.insertAdjacentHTML('beforeend', HTML);
-    });
+    updateUIrows(lib);
   }
-
-  //
-  //
-  //
-  //
-  //
-  //
-  //
 });
 
 // --- 列出所有小筆記簿按鈕
@@ -193,8 +171,8 @@ function loadnotebook() {
   });
   //如果小筆記本小於6本，要有新增的筆記本
   if (acc.notebooks.length < 6) {
-    const lastHTML = ` <a class=" all_notebooks btn_grey" href="#">+</a> `;
-    btn_notebooks.insertAdjacentHTML('beforeend', lastHTML);
+    const addNotebookHTML = ` <a class=" all_notebooks btn_grey" href="#">+</a> `;
+    btn_notebooks.insertAdjacentHTML('beforeend', addNotebookHTML);
   }
 }
 
