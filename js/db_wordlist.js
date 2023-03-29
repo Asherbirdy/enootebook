@@ -4,14 +4,18 @@ const search = document.querySelector('.searchbar'); //搜尋input
 const output = document.querySelector('.output'); //放列表的父層
 const wordLength = document.querySelector('.wordLength'); // 單字數量
 const wordFamiliar = document.querySelector('.wordFamiliar'); // 平均熟悉度
+const curSortStr = document.querySelector('.loadCurSort'); //選擇
+
 //BUTTON
 const btn_sort = document.querySelector('.btn_sort'); //排序按鈕
 const btn_AToZ = document.querySelector('.btn_aToz');
+const btn_NewToOld = document.querySelector('.btn_NewOld');
 const btn_addWord = document.querySelector('.btn_add'); //新增單字 按鈕
-const notebooks = document.querySelector('.notes_box'); //小筆記簿
-const all_notebook = document.querySelector('.all_notebooks');
+const btn_notebooks = document.querySelector('.notes_box'); //小筆記簿
+const btn_all_notebook = document.querySelector('.all_notebooks');
 //彈出視窗
 const modal = document.getElementById('pop_up_addword'); //彈出視窗
+
 // ---監聽---
 //1.顯示頁面：
 window.addEventListener('DOMContentLoaded', loadList);
@@ -69,10 +73,13 @@ function loadList() {
 // --- 搜尋功能 ---
 function filter(e) {
   output.innerHTML = '';
+
   const typing = engNamesArr.filter(item =>
     item.toLowerCase().startsWith(e.target.value.toLowerCase())
   );
   if (typing.length > 0) {
+    curSortStr.textContent = '';
+    curSortStr.textContent = '排序 ：「 新到舊  」 ';
     typing.forEach((item, i) => {
       const index = engNamesArr.indexOf(item);
       const HTML = rowsHtmlTemplate(lib[index], index);
@@ -90,6 +97,8 @@ btn_sort.addEventListener('click', function (e) {
   btn_sort_switch = !btn_sort_switch;
   output.innerHTML = '';
   search.value = '';
+  curSortStr.textContent = '';
+  curSortStr.textContent = '排序 ：「 熟悉度排序 」 ';
 
   if (btn_sort_switch === false) {
     const sortBigToSmallArr = lib
@@ -118,6 +127,8 @@ btn_AToZ.addEventListener('click', function (e) {
   output.innerHTML = '';
   search.value = '';
 
+  curSortStr.textContent = '';
+  curSortStr.textContent = '排序 ：「 英文排序 」 ';
   if (btn_aToZ_switch === true) {
     const aToZsort = lib
       .slice()
@@ -140,16 +151,50 @@ btn_AToZ.addEventListener('click', function (e) {
   }
 });
 
+// --- 新舊排序： ---
+let btn_NewToOld_switch;
+btn_NewToOld.addEventListener('click', function (e) {
+  e.preventDefault();
+  btn_NewToOld_switch = !btn_NewToOld_switch;
+  console.log(btn_NewToOld_switch ? 'true' : 'false');
+  output.innerHTML = '';
+  search.value = '';
+  curSortStr.textContent = '';
+  curSortStr.textContent = '排序 ：「 新舊排序 」 ';
+
+  if (btn_NewToOld_switch === true) {
+    const newLib = lib.slice().reverse();
+    newLib.forEach((item, i) => {
+      const HTML = rowsHtmlTemplate(newLib[i], i);
+      output.insertAdjacentHTML('beforeend', HTML);
+    });
+  } else {
+    let lib = ownLibrary;
+    lib.forEach((item, i) => {
+      const HTML = rowsHtmlTemplate(lib[i], i);
+      output.insertAdjacentHTML('beforeend', HTML);
+    });
+  }
+
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+});
+
 // --- 列出所有小筆記簿按鈕
 function loadnotebook() {
   acc.notebooks.forEach((item, i) => {
     let html = `<a id="notebooksLink" class="small_notebooks btn_outline" notebooks_data="${i}" href="#">${item.notebookName} </a>`;
-    notebooks.insertAdjacentHTML('beforeend', html);
+    btn_notebooks.insertAdjacentHTML('beforeend', html);
   });
   //如果小筆記本小於6本，要有新增的筆記本
   if (acc.notebooks.length < 6) {
     const lastHTML = ` <a class=" all_notebooks btn_grey" href="#">+</a> `;
-    notebooks.insertAdjacentHTML('beforeend', lastHTML);
+    btn_notebooks.insertAdjacentHTML('beforeend', lastHTML);
   }
 }
 
@@ -180,7 +225,6 @@ document.addEventListener('click', function (e) {
         notebook.classList.add('btn_outline');
       }
     });
-
     // 留下 all_notebooks 的 btn_color class
     e.target.classList.add('btn_color');
   }
@@ -196,9 +240,9 @@ document.addEventListener('click', function (e) {
   if (e.target.classList.contains('small_notebooks')) {
     e.preventDefault();
     // 如果點擊小筆記本 取消大筆記本的樣式
-    if (all_notebook.classList.contains('btn_color')) {
-      all_notebook.classList.remove('btn_color');
-      all_notebook.classList.add('btn_outline');
+    if (btn_all_notebook.classList.contains('btn_color')) {
+      btn_all_notebook.classList.remove('btn_color');
+      btn_all_notebook.classList.add('btn_outline');
     }
     //取得id 的數值 //0 , 1
     let notebooksData = e.target.getAttribute('notebooks_data');
@@ -240,5 +284,3 @@ function currentLibData() {
   wordFamiliar.textContent = familiarNum;
 }
 currentLibData();
-
-//當點擊小筆記簿系列取消
