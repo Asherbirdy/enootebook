@@ -1,14 +1,17 @@
 // ---DOM---
+//LABEL
 const search = document.querySelector('.searchbar'); //搜尋input
 const output = document.querySelector('.output'); //放列表的父層
-const btn_sort = document.querySelector('.btn_sort'); //排序按鈕
-const btn_addWord = document.querySelector('.btn_add'); //新增單字 按鈕
-const notebooks = document.querySelector('.notes_box'); //小筆記簿
-const modal = document.getElementById('pop_up_addword'); //彈出視窗
 const wordLength = document.querySelector('.wordLength'); // 單字數量
 const wordFamiliar = document.querySelector('.wordFamiliar'); // 平均熟悉度
+//BUTTON
+const btn_sort = document.querySelector('.btn_sort'); //排序按鈕
+const btn_AToZ = document.querySelector('.btn_aToz');
+const btn_addWord = document.querySelector('.btn_add'); //新增單字 按鈕
+const notebooks = document.querySelector('.notes_box'); //小筆記簿
 const all_notebook = document.querySelector('.all_notebooks');
-
+//彈出視窗
+const modal = document.getElementById('pop_up_addword'); //彈出視窗
 // ---監聽---
 //1.顯示頁面：
 window.addEventListener('DOMContentLoaded', loadList);
@@ -18,7 +21,6 @@ search.addEventListener('input', filter);
 
 // ---抓取資料並拆解---
 const acc = JSON.parse(localStorage.getItem('userData'));
-// console.log(acc);
 //1.總單字庫：
 const { ownLibrary } = acc;
 
@@ -103,6 +105,36 @@ btn_sort.addEventListener('click', function (e) {
       .sort((a, b) => (a.level > b.level ? 1 : -1));
     sortNewToOldArr.forEach((item, i) => {
       const HTML = rowsHtmlTemplate(sortNewToOldArr[i], i);
+      output.insertAdjacentHTML('beforeend', HTML);
+    });
+  }
+});
+
+// --- A-Z排序 ---
+let btn_aToZ_switch;
+btn_AToZ.addEventListener('click', function (e) {
+  e.preventDefault();
+  btn_aToZ_switch = !btn_aToZ_switch;
+  output.innerHTML = '';
+  search.value = '';
+
+  if (btn_aToZ_switch === true) {
+    const aToZsort = lib
+      .slice()
+      .sort((a, b) => a.engName.localeCompare(b.engName));
+    console.log(aToZsort);
+
+    aToZsort.forEach((item, i) => {
+      const HTML = rowsHtmlTemplate(aToZsort[i], i);
+      output.insertAdjacentHTML('beforeend', HTML);
+    });
+  } else {
+    const zToAsort = lib
+      .slice()
+      .sort((a, b) => b.engName.localeCompare(a.engName));
+
+    zToAsort.forEach((item, i) => {
+      const HTML = rowsHtmlTemplate(zToAsort[i], i);
       output.insertAdjacentHTML('beforeend', HTML);
     });
   }
@@ -196,8 +228,6 @@ document.addEventListener('click', function (e) {
 function currentLibData() {
   wordLength.textContent = '';
   wordFamiliar.textContent = '';
-  console.log(wordLength.textContent);
-  console.log(wordFamiliar.textContent);
 
   const libLength = lib.length;
   const totalLevel =
