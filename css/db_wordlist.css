@@ -169,23 +169,72 @@
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
+  padding: 0 30px;
 }
 
 .modal-content {
+  box-sizing: border-box;
   background-color: #fefefe;
   margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
+  border-radius: 10px;
   width: 30%;
   display: flex;
   flex-direction: column;
-  border-radius: 20px;
+}
+
+.addword_titlebox {
+  border-radius: 10px 10px 0px 0px;
+  background-color: #009bee;
+  padding: 10px 50px;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.addword_content {
+  padding: 10px 30px;
+}
+
+.addword_content p {
+  margin-bottom: 4px;
+}
+
+.addword_content input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 3px 0;
+  font-size: 20px;
 }
 
 .modal-content h3 {
   text-align: center;
   margin-bottom: 10px;
 }
+
+.addword_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.addword_button a {
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 10px 30px;
+}
+
+.aw_btn_orange {
+  background-color: orange;
+}
+
+.aw_btn_grey {
+  background-color: rgb(219, 219, 219);
+}
+
+/* ------------ */
 
 .notes_box {
   display: flex;
