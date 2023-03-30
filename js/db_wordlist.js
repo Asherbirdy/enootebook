@@ -5,7 +5,7 @@ const output = document.querySelector('.output'); //放列表的父層
 const wordLength = document.querySelector('.wordLength'); // 單字數量
 const wordFamiliar = document.querySelector('.wordFamiliar'); // 平均熟悉度
 const curSortStr = document.querySelector('.loadCurSort'); //選擇
-
+const verify_info_label = document.querySelector('.verify_info_label'); //加入單字 / 驗證文字
 //BUTTON：
 const btn_sort = document.querySelector('.btn_sort'); //排序按鈕
 const btn_AToZ = document.querySelector('.btn_aToz');
@@ -14,6 +14,10 @@ const btn_addWord = document.querySelector('.btn_add'); //新增單字 按鈕
 const btn_notebooks = document.querySelector('.notes_box'); //小筆記簿
 const btn_all_notebook = document.querySelector('.all_notebooks');
 const smallNotebooks = document.querySelectorAll('.small_notebooks'); //取得所有 small_notebooks 的節點
+const btn_add_word = document.querySelector('.btn_add_word'); //加入單字按鈕
+
+//Input
+const inputElement = document.getElementById('input_word'); //監聽新增單字input
 
 //彈出視窗：
 const modal = document.getElementById('pop_up_addword'); //彈出視窗
@@ -265,7 +269,6 @@ document.addEventListener('click', function (e) {
       console.log('陣列裡沒有這個單字');
     }
   } else {
-    console.log('false');
   }
 });
 
@@ -290,6 +293,51 @@ function currentLibData() {
 //--- 新增單字 ---
 btn_addWord.addEventListener('click', function () {
   modal.style.display = 'block';
+  const inputElement = document.getElementById('input_word');
+
+  let timeoutId;
+
+  inputElement.addEventListener('input', function () {
+    clearTimeout(timeoutId);
+    btn_add_word.textContent = '';
+    btn_add_word.textContent = '驗證中';
+    btn_add_word.classList.add('aw_btn_grey');
+    btn_add_word.classList.remove('aw_btn_orange');
+    btn_add_word.classList.add('no_click');
+    verify_info_label.textContent = '';
+    timeoutId = setTimeout(function () {
+      // 監聽輸入得值：
+      const inputEngWord = inputElement.value;
+
+      // 搜尋單字是否存在資料庫
+      const findword = acc.ownLibrary.filter(
+        item => item.engName === inputElement.value
+      );
+      var regex = /[A-Z0-9\s!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]+/;
+
+      //先測欄位是否有空白
+      if (regex.test(inputEngWord) || inputElement.value === '') {
+        verify_info_label.textContent = '不能有大小/符號/空格';
+      } else {
+        //如果監聽的值包含這字
+        const isLibHaveThisWord = findword.some(
+          obj => obj.engName === inputEngWord
+        );
+        //如果有這個字：打開送出按鈕
+        if (isLibHaveThisWord) {
+          verify_info_label.textContent = '已經有這個單字了！';
+        } else {
+          verify_info_label.textContent = '填寫中文單字 / 留意正確性';
+
+          btn_add_word.textContent = '';
+          btn_add_word.textContent = '加入單字';
+          btn_add_word.classList.add('aw_btn_orange');
+          btn_add_word.classList.remove('aw_btn_grey');
+          btn_add_word.classList.remove('no_click');
+        }
+      }
+    }, 500);
+  });
 });
 
 //--- 關掉新增單字視窗 ---

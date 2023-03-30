@@ -234,6 +234,15 @@
   background-color: rgb(219, 219, 219);
 }
 
+.verify_label {
+  display: flex;
+}
+
+.no_click {
+  pointer-events: none;
+  cursor: default;
+}
+
 /* ------------ */
 
 .notes_box {

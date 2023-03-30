@@ -156,7 +156,7 @@
                       href="#"
                       >所有單字</a
                     >
-                    <p class="choose_notebook">小筆記簿</p>
+                    <p class="choose_notebook">考卷</p>
 
                     <!-- 這邊是放小筆記本的按鈕 -->
                   </div>
@@ -174,15 +174,19 @@
           </div>
           <div class="addword_content">
             <p>英文單字：</p>
-            <input type="text" />
+            <input id="input_word" type="text" />
             <p>中文單字：</p>
             <input type="text" id="input_word" />
-            <p>驗證：</p>
+
+            <div class="verify_label">
+              <p>驗證：</p>
+              <p class="verify_info_label"></p>
+            </div>
           </div>
 
           <div class="addword_button">
             <a class="aw_btn_grey" href="#">取消</a>
-            <a class="aw_btn_orange" href="#">送出</a>
+            <a class="aw_btn_grey no_click btn_add_word" href="#">驗證中</a>
           </div>
         </div>
       </div>
