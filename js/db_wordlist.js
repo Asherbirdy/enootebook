@@ -235,6 +235,7 @@ document.addEventListener('click', function (e) {
   if (e.target.classList.contains('btn_delete')) {
     //找到單字的那行：
     const thisWordRow = e.target.parentElement.parentElement.parentElement;
+    console.log(thisWordRow);
     //找到那行的英文字！
     const selectContentWord = thisWordRow.querySelector('.engName').textContent;
     console.log('已選取' + selectContentWord);
@@ -244,10 +245,6 @@ document.addEventListener('click', function (e) {
 `);
     //如果
     if (deleteAlert) {
-      const findWord = acc.ownLibrary.find(word => {
-        return word.engName === selectContentWord;
-      });
-
       //刪掉
       acc.ownLibrary = acc.ownLibrary.filter(
         word => word.engName !== selectContentWord
@@ -261,7 +258,8 @@ document.addEventListener('click', function (e) {
       //更新UI
       lib = acc.ownLibrary;
       console.log(lib);
-      loadList();
+      // loadList();
+      thisWordRow.remove();
       currentNotebook();
       currentLibData();
     } else {
