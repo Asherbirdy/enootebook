@@ -198,7 +198,7 @@ document.addEventListener('click', function (e) {
     // 留下 all_notebooks 的 btn_color class
     e.target.classList.add('btn_color');
     lib = ownLibrary;
-    loadList();
+
     currentNotebook();
     currentLibData();
   }
@@ -226,7 +226,6 @@ document.addEventListener('click', function (e) {
         notebook.classList.add('btn_outline');
       }
     });
-    loadList();
     currentNotebook();
     currentLibData();
   }
