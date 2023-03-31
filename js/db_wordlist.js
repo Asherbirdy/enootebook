@@ -358,14 +358,13 @@ btn_cancel_addword.addEventListener('click', function (e) {
 });
 
 // ---- 新增單字 到 localStorage的按鈕 ----
-btn_add_word.addEventListener('click', function () {
+btn_add_word.addEventListener('click', function (e) {
+  e.preventDefault();
   //取得英文input裡的值：
   const eng_InputValue = eng_inputElement.value;
-  console.log(eng_InputValue);
 
   //取得英文input裡的值：
   const ch_InputValue = ch_inputElement.value;
-  console.log(ch_InputValue);
 
   //推入資料原型：
   let objDataProto = {
