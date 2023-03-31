@@ -17,8 +17,8 @@ const smallNotebooks = document.querySelectorAll('.small_notebooks'); //取得�
 const btn_add_word = document.querySelector('.btn_add_word'); //加入單字按鈕
 const btn_cancel_addword = document.querySelector('.btn_cancel_addword'); //取消加入單字按鈕
 //Input
-const inputElement = document.getElementById('input_word'); //監聽新增單字input
-
+const eng_inputElement = document.getElementById('input_word'); //監聽新增單字input
+const ch_inputElement = document.getElementById('ch_input_word'); //監聽中文新增單字input
 //彈出視窗：
 const modal = document.getElementById('pop_up_addword'); //彈出視窗
 
@@ -293,11 +293,10 @@ function currentLibData() {
 //--- 新增單字 / 單字驗證 ---
 btn_addWord.addEventListener('click', function () {
   modal.style.display = 'block';
-  const inputElement = document.getElementById('input_word');
 
   let timeoutId;
 
-  inputElement.addEventListener('input', function () {
+  eng_inputElement.addEventListener('input', function () {
     clearTimeout(timeoutId);
     btn_add_word.textContent = '';
     btn_add_word.textContent = '驗證中';
@@ -307,28 +306,32 @@ btn_addWord.addEventListener('click', function () {
     verify_info_label.textContent = '';
     timeoutId = setTimeout(function () {
       // 監聽輸入得值：
-      const inputEngWord = inputElement.value;
+      const inputEngWord = eng_inputElement.value;
 
       // 搜尋單字是否存在資料庫
       const findword = acc.ownLibrary.filter(
-        item => item.engName === inputElement.value
+        item => item.engName === eng_inputElement.value
       );
       //空白 / 特殊符號 / 中文單字：
       const regex = /[\u4e00-\u9fffA-Z0-9\s!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]+/;
 
       //先測欄位是否有空白
-      if (regex.test(inputEngWord) || inputElement.value === '') {
+      if (regex.test(inputEngWord) || eng_inputElement.value === '') {
         verify_info_label.textContent = '錯誤英文格式';
       } else {
         //如果監聽的值包含這字
         const isLibHaveThisWord = findword.some(
           obj => obj.engName === inputEngWord
         );
-        //如果有這個字：打開送出按鈕
+
         if (isLibHaveThisWord) {
           verify_info_label.textContent = '已經有這個單字了！';
         } else {
-          verify_info_label.textContent = '填寫中文單字 / 留意正確性';
+          verify_info_label.textContent = '填寫翻譯或註解，並留意正確性';
+          // if(ch_addword_input.textContent =!)
+        }
+        if (isLibHaveThisWord) {
+        } else {
           btn_add_word.textContent = '';
           btn_add_word.textContent = '加入單字';
           btn_add_word.classList.add('aw_btn_orange');
@@ -343,9 +346,7 @@ btn_addWord.addEventListener('click', function () {
 //--- 關掉新增單字視窗 ---
 btn_cancel_addword.addEventListener('click', function (e) {
   modal.style.display = 'none';
-  // if (e.target === modal) {
-  //   modal.style.display = 'none';
-  // }
+  // --- 清掉 中文 和 英文 input---
+  eng_inputElement.value = '';
+  ch_inputElement.value = '';
 });
-
-// --- 新增單字 ---
