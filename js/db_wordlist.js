@@ -294,7 +294,8 @@ function currentLibData() {
 }
 
 //--- 新增單字 / 單字驗證 ---
-btn_addWord.addEventListener('click', function () {
+btn_addWord.addEventListener('click', function (e) {
+  e.preventDefault();
   modal.style.display = 'block';
 
   let timeoutId;
@@ -357,7 +358,7 @@ btn_cancel_addword.addEventListener('click', function (e) {
   ch_inputElement.value = '';
 });
 
-// ---- 新增單字 到 localStorage的按鈕 ----
+// ---- 送出單字 到 localStorage的按鈕 ----
 btn_add_word.addEventListener('click', function (e) {
   e.preventDefault();
   //取得英文input裡的值：
@@ -395,7 +396,8 @@ btn_add_word.addEventListener('click', function (e) {
 
       //更新UI
       lib = acc.ownLibrary;
-      loadList();
+      btn_NewToOld.click();
+
       currentNotebook();
       currentLibData();
 
