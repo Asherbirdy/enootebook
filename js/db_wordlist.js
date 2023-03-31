@@ -6,6 +6,7 @@ const wordLength = document.querySelector('.wordLength'); // 單字數量
 const wordFamiliar = document.querySelector('.wordFamiliar'); // 平均熟悉度
 const curSortStr = document.querySelector('.loadCurSort'); //選擇
 const verify_info_label = document.querySelector('.verify_info_label'); //加入單字 / 驗證文字
+
 //BUTTON：
 const btn_sort = document.querySelector('.btn_sort'); //排序按鈕
 const btn_AToZ = document.querySelector('.btn_aToz');
@@ -16,9 +17,11 @@ const btn_all_notebook = document.querySelector('.all_notebooks');
 const smallNotebooks = document.querySelectorAll('.small_notebooks'); //取得所有考卷節點
 const btn_add_word = document.querySelector('.btn_add_word'); //加入單字按鈕
 const btn_cancel_addword = document.querySelector('.btn_cancel_addword'); //取消加入單字按鈕
+
 //Input
 const eng_inputElement = document.getElementById('input_word'); //監聽新增單字input
 const ch_inputElement = document.getElementById('ch_input_word'); //監聽中文新增單字input
+
 //彈出視窗：
 const modal = document.getElementById('pop_up_addword'); //彈出視窗
 
@@ -297,6 +300,8 @@ btn_addWord.addEventListener('click', function () {
   let timeoutId;
 
   eng_inputElement.addEventListener('input', function () {
+    //重新讀取：
+    acc = JSON.parse(localStorage.getItem('userData'));
     clearTimeout(timeoutId);
     btn_add_word.textContent = '';
     btn_add_word.textContent = '驗證中';
@@ -312,6 +317,7 @@ btn_addWord.addEventListener('click', function () {
       const findword = acc.ownLibrary.filter(
         item => item.engName === eng_inputElement.value
       );
+      console.log(acc);
       //空白 / 特殊符號 / 中文單字：
       const regex = /[\u4e00-\u9fffA-Z0-9\s!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]+/;
 
@@ -349,4 +355,62 @@ btn_cancel_addword.addEventListener('click', function (e) {
   // --- 清掉 中文 和 英文 input---
   eng_inputElement.value = '';
   ch_inputElement.value = '';
+});
+
+// ---- 新增單字 到 localStorage的按鈕 ----
+btn_add_word.addEventListener('click', function () {
+  //取得英文input裡的值：
+  const eng_InputValue = eng_inputElement.value;
+  console.log(eng_InputValue);
+
+  //取得英文input裡的值：
+  const ch_InputValue = ch_inputElement.value;
+  console.log(ch_InputValue);
+
+  //推入資料原型：
+  let objDataProto = {
+    level: 3,
+  };
+
+  //如果有空值：
+  if (eng_InputValue === '' || ch_InputValue === '') {
+    alert('不能有空格');
+  } else {
+    const doublecheck = confirm(
+      `確定將英文單字：${eng_InputValue} 和 翻譯/注解：${ch_InputValue}加入「 單字筆記簿嗎 」？`
+    );
+
+    if (doublecheck) {
+      //推入ownlib模型
+      objDataProto['engName'] = `${eng_InputValue}`;
+      objDataProto['chName'] = `${ch_InputValue}`;
+
+      //推進 acc裡面
+      acc.ownLibrary.push(objDataProto);
+
+      //更新localStorage
+      localStorage.setItem('userData', JSON.stringify(acc));
+
+      //重新讀取：
+      acc = JSON.parse(localStorage.getItem('userData'));
+
+      //更新UI
+      lib = acc.ownLibrary;
+      loadList();
+      currentNotebook();
+      currentLibData();
+
+      // 加入單字庫成功後 關掉視窗
+      function closeModal() {
+        modal.style.display = 'none';
+        // --- 清掉 中文 和 英文 input---
+        eng_inputElement.value = '';
+        ch_inputElement.value = '';
+      }
+      closeModal();
+      alert('加入成功');
+    } else {
+      console.log('取消');
+    }
+  }
 });
