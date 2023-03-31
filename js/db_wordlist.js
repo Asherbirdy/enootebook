@@ -13,9 +13,9 @@ const btn_NewToOld = document.querySelector('.btn_NewOld');
 const btn_addWord = document.querySelector('.btn_add'); //新增單字 按鈕
 const btn_notebooks = document.querySelector('.notes_box'); //小筆記簿
 const btn_all_notebook = document.querySelector('.all_notebooks');
-const smallNotebooks = document.querySelectorAll('.small_notebooks'); //取得所有 small_notebooks 的節點
+const smallNotebooks = document.querySelectorAll('.small_notebooks'); //取得所有考卷節點
 const btn_add_word = document.querySelector('.btn_add_word'); //加入單字按鈕
-
+const btn_cancel_addword = document.querySelector('.btn_cancel_addword'); //取消加入單字按鈕
 //Input
 const inputElement = document.getElementById('input_word'); //監聽新增單字input
 
@@ -341,8 +341,11 @@ btn_addWord.addEventListener('click', function () {
 });
 
 //--- 關掉新增單字視窗 ---
-window.addEventListener('click', function (event) {
-  if (event.target == modal) {
-    modal.style.display = 'none';
-  }
+btn_cancel_addword.addEventListener('click', function (e) {
+  modal.style.display = 'none';
+  // if (e.target === modal) {
+  //   modal.style.display = 'none';
+  // }
 });
+
+// --- 新增單字 ---
