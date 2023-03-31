@@ -195,8 +195,12 @@
   padding: 10px 30px;
 }
 
-.addword_content p {
-  margin-bottom: 4px;
+.addword_chWord {
+  margin-bottom: 10px;
+}
+
+.addword_engbox {
+  margin-bottom: 10px;
 }
 
 .addword_content input {
@@ -208,7 +212,6 @@
 
 .modal-content h3 {
   text-align: center;
-  margin-bottom: 10px;
 }
 
 .addword_button {
@@ -231,11 +234,39 @@
 }
 
 .aw_btn_grey {
-  background-color: rgb(219, 219, 219);
+  background-color: #dbdbdb;
 }
 
 .verify_label {
   display: flex;
+}
+
+.addword_engbox {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.addword_engbox img {
+  width: 20px;
+}
+
+.question_icon {
+  display: block;
+}
+
+.question_icon:hover::before {
+  display: inline-block;
+  position: absolute;
+  top: -5px;
+  left: 110px;
+  color: #fff;
+  font-size: 14px;
+  background: rgb(132, 132, 132);
+  padding: 5px;
+  border-radius: 5px;
+  content: '英文單字：不能有 中文, 英文大小, 符號, 空白';
+  line-height: 1.6;
 }
 
 .no_click {

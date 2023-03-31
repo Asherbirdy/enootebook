@@ -290,7 +290,7 @@ function currentLibData() {
   wordFamiliar.textContent = familiarNum;
 }
 
-//--- 新增單字 ---
+//--- 新增單字 / 單字驗證 ---
 btn_addWord.addEventListener('click', function () {
   modal.style.display = 'block';
   const inputElement = document.getElementById('input_word');
@@ -313,11 +313,12 @@ btn_addWord.addEventListener('click', function () {
       const findword = acc.ownLibrary.filter(
         item => item.engName === inputElement.value
       );
-      var regex = /[A-Z0-9\s!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]+/;
+      //空白 / 特殊符號 / 中文單字：
+      const regex = /[\u4e00-\u9fffA-Z0-9\s!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]+/;
 
       //先測欄位是否有空白
       if (regex.test(inputEngWord) || inputElement.value === '') {
-        verify_info_label.textContent = '不能有大小/符號/空格';
+        verify_info_label.textContent = '錯誤英文格式';
       } else {
         //如果監聽的值包含這字
         const isLibHaveThisWord = findword.some(
@@ -328,7 +329,6 @@ btn_addWord.addEventListener('click', function () {
           verify_info_label.textContent = '已經有這個單字了！';
         } else {
           verify_info_label.textContent = '填寫中文單字 / 留意正確性';
-
           btn_add_word.textContent = '';
           btn_add_word.textContent = '加入單字';
           btn_add_word.classList.add('aw_btn_orange');
@@ -336,7 +336,7 @@ btn_addWord.addEventListener('click', function () {
           btn_add_word.classList.remove('no_click');
         }
       }
-    }, 500);
+    }, 800);
   });
 });
 
