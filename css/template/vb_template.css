@@ -129,6 +129,10 @@ footer a:hover {
   background-color: white;
 }
 
+body.lock-scroll {
+  overflow: hidden;
+}
+
 @media screen and (max-width: 414px) {
   .hamburger {
     display: block;

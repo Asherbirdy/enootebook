@@ -1,7 +1,16 @@
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
-hamburger.addEventListener('click', function () {
+let isLocked = false;
+hamburger.addEventListener('click', function (e) {
+  e.preventDefault();
+  if (!isLocked) {
+    document.body.classList.add('lock-scroll');
+    isLocked = true;
+  } else {
+    document.body.classList.remove('lock-scroll');
+    isLocked = false;
+  }
   hamburger.classList.toggle('active');
   navMenu.classList.toggle('active');
 });
