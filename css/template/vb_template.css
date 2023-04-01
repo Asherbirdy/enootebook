@@ -73,13 +73,14 @@ a {
   }
 
   .nav-menu {
+    box-sizing: border-box;
     position: fixed;
     left: -100%;
     top: 70px;
     gap: 0;
     flex-direction: column;
     background-color: #3c91e0;
-    width: 100%;
+    width: 414px;
     text-align: center;
     transition: 0.3s;
   }
@@ -90,6 +91,7 @@ a {
 
   .nav-menu.active {
     left: 0;
+    width: 414px;
   }
 }
 
@@ -155,7 +157,7 @@ body.lock-scroll {
     gap: 0;
     flex-direction: column;
 
-    width: 100%;
+    width: 414px;
     text-align: center;
     transition: 0.3s;
   }

@@ -289,6 +289,10 @@ main .main-subtitle {
     width: 100%;
   }
   /* -------- main -------- */
+  body {
+    width: 414px;
+  }
+
   main {
     width: 100%;
   }
@@ -322,5 +326,14 @@ main .main-subtitle {
   .mb1-right {
     padding: 10px;
   }
+
+  .mb2-box {
+    width: 100%;
+  }
+
   /* footer */
+
+  footer {
+    width: 100%;
+  }
 }
