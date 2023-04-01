@@ -12,19 +12,36 @@
   <body>
     <!-- header -->
     <header>
-      <nav>
-        <a class="logo" href="index.html"
-        ><img src="svg/01_logo/enotebook_logo-white.svg"
-      /></a>
-        <ul class="btn-navigation">
-          <li><a href="index.html">產品介紹</a></li>
-          <li><a href="vb_steps.html">操作說明</a></li>
-          <li><a href="vb_pricingPage.html">學習方案</a></li>
+      <nav class="navbar">
+        <a class="nav-branding" href="index.html"
+          ><img src="svg/01_logo/enotebook_logo-white.svg"
+        /></a>
+
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">產品介紹</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="vb_steps.html">操作說明</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="vb_pricingPage.html">學習方案</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" class="btn-login" href="db_home.html">登入</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" class="btn-freelogin" href="db_home.html"
+              >免費體驗</a
+            >
+          </li>
         </ul>
-        <ul class="btn-loginbox">
-          <li><a href="db_home.html" class="btn-login">登入</a></li>
-          <li><a href="db_home.html" class="btn-freelogin">免費體驗</a></li>
-        </ul>
+
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
       </nav>
     </header>
     <!-- First Banner -->
@@ -158,4 +175,5 @@
       </p>
     </footer>
   </body>
+  <script src="js/vb_temp.js"></script>
 </html>
