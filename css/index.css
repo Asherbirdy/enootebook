@@ -244,10 +244,6 @@ main .main-subtitle {
 /* ---------------RWD--------------- */
 
 @media screen and (max-width: 414px) {
-  .navbar {
-    padding: 0;
-  }
-
   /* 第一個banner: */
   .header-banner {
     background-image: none;

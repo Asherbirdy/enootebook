@@ -135,6 +135,10 @@ body.lock-scroll {
 }
 
 @media screen and (max-width: 414px) {
+  .navbar {
+    box-sizing: border-box;
+  }
+
   .hamburger {
     display: block;
   }
