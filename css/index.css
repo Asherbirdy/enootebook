@@ -246,7 +246,7 @@ main .main-subtitle {
   /* 第一個banner: */
   .header-banner {
     background-image: none;
-    width: 414px;
+    width: 100%;
   }
   .header-banner {
     height: 200px;
@@ -272,7 +272,7 @@ main .main-subtitle {
   /* 第二個banner */
 
   .three-section {
-    width: 414px;
+    width: 100%;
   }
   .three-section li {
     margin: 10px 0px;
@@ -286,11 +286,11 @@ main .main-subtitle {
 
   .three-section li p {
     font-size: 6px;
-    width: 80px;
+    width: 100%;
   }
   /* -------- main -------- */
   main {
-    width: 414px;
+    width: 100%;
   }
 
   main .main-title {
@@ -305,14 +305,14 @@ main .main-subtitle {
   }
 
   .main-box {
-    width: 414px;
+    width: 100%;
   }
   .main-box li {
     margin: 20px 0;
   }
   /* main 2 */
   .main-bn-innerbox {
-    width: 414px;
+    width: 100%;
   }
 
   .main-banner1 img {
