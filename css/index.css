@@ -99,6 +99,7 @@ main {
 }
 
 main .main-title {
+  width: 100%;
   font-size: 24px;
   text-align: center;
   margin-top: 80px;
@@ -126,7 +127,7 @@ main .main-subtitle {
 .main-box li {
   width: auto;
 
-  padding: 30px 30px 30px 30px;
+  padding: 0px 0px 0px 0px;
   margin: 20px;
 }
 
@@ -243,6 +244,10 @@ main .main-subtitle {
 /* ---------------RWD--------------- */
 
 @media screen and (max-width: 414px) {
+  .navbar {
+    padding: 0;
+  }
+
   /* 第一個banner: */
   .header-banner {
     background-image: none;
