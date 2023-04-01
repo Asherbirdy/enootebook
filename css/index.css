@@ -1,6 +1,9 @@
 @import url('template/reset.css');
 
 /* ------------------First-Banner---------------- */
+body {
+  box-sizing: border-box;
+}
 
 .top-banner {
   width: 100%;
@@ -272,7 +275,7 @@ main .main-subtitle {
     width: 414px;
   }
   .three-section li {
-    margin: 10px 5px;
+    margin: 10px 0px;
   }
 
   .three-section li h3 {
@@ -304,10 +307,12 @@ main .main-subtitle {
   .main-box {
     width: 414px;
   }
-
+  .main-box li {
+  }
   /* main 2 */
   .main-bn-innerbox {
     width: 414px;
+    margin: 20px 0;
   }
 
   .main-banner1 img {
