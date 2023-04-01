@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0 auto;
 }
@@ -136,7 +140,12 @@ body.lock-scroll {
 
 @media screen and (max-width: 414px) {
   .navbar {
+    width: 100%;
     box-sizing: border-box;
+  }
+
+  .nav-branding img {
+    width: 100%;
   }
 
   .hamburger {
