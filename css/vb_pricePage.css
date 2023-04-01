@@ -191,3 +191,6 @@ th {
   background-color: #ffffff;
   color: black;
 }
+
+@media screen and (max-width: 414px) {
+}

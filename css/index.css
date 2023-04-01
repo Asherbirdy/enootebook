@@ -268,6 +268,9 @@ main .main-subtitle {
 
   /* 第二個banner */
 
+  .three-section {
+    width: 414px;
+  }
   .three-section li {
     margin: 10px 5px;
   }
@@ -296,6 +299,10 @@ main .main-subtitle {
   main .main-subtitle {
     font-size: 10px;
     margin-bottom: 10px;
+  }
+
+  .main-box {
+    width: 414px;
   }
 
   /* main 2 */
