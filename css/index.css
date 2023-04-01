@@ -318,5 +318,9 @@ main .main-subtitle {
   .main-banner1 img {
     display: none;
   }
+
+  .mb1-right {
+    padding: 10px;
+  }
   /* footer */
 }
