@@ -4,13 +4,8 @@ const navMenu = document.querySelector('.nav-menu');
 let isLocked = false;
 hamburger.addEventListener('click', function (e) {
   e.preventDefault();
-  if (!isLocked) {
-    document.body.classList.add('lock-scroll');
-    isLocked = true;
-  } else {
-    document.body.classList.remove('lock-scroll');
-    isLocked = false;
-  }
+  isLocked = !isLocked;
+
   hamburger.classList.toggle('active');
   navMenu.classList.toggle('active');
 });
@@ -21,3 +16,15 @@ document.querySelectorAll('.nav-link').forEach(n =>
     navMenu.classList.remove('active');
   })
 );
+
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  console.log('User scrolled the page!');
+  // 在這裡可以編寫畫面滑動時要執行的其他程式碼
+  if (isLocked) {
+    hamburger.click();
+  }
+}
