@@ -282,4 +282,29 @@ main .main-subtitle {
     font-size: 6px;
     width: 80px;
   }
+  /* -------- main -------- */
+  main {
+    width: 414px;
+  }
+
+  main .main-title {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 10px;
+  }
+
+  main .main-subtitle {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+
+  /* main 2 */
+  .main-bn-innerbox {
+    width: 414px;
+  }
+
+  .main-banner1 img {
+    display: none;
+  }
+  /* footer */
 }
