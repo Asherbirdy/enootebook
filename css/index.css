@@ -308,11 +308,11 @@ main .main-subtitle {
     width: 414px;
   }
   .main-box li {
+    margin: 20px 0;
   }
   /* main 2 */
   .main-bn-innerbox {
     width: 414px;
-    margin: 20px 0;
   }
 
   .main-banner1 img {
