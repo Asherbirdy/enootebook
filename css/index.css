@@ -237,4 +237,49 @@ main .main-subtitle {
   margin: 9px 0;
 }
 
-/* ---------------footer--------------- */
+/* ---------------RWD--------------- */
+
+@media screen and (max-width: 414px) {
+  /* 第一個banner: */
+  .header-banner {
+    background-image: none;
+    width: 414px;
+  }
+  .header-banner {
+    height: 200px;
+  }
+
+  .header-banner-box {
+    margin-top: 45px;
+  }
+
+  .header-banner-box h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .header-banner-box img {
+    display: none;
+  }
+
+  .header-banner-box a {
+    font-size: 10px;
+  }
+
+  /* 第二個banner */
+
+  .three-section li {
+    margin: 10px 5px;
+  }
+
+  .three-section li h3 {
+    font-size: 10px;
+    font-weight: bold;
+    margin-left: 20px;
+  }
+
+  .three-section li p {
+    font-size: 6px;
+    width: 80px;
+  }
+}

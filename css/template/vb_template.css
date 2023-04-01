@@ -129,7 +129,7 @@ footer a:hover {
   background-color: white;
 }
 
-@media (max-width: 414px) {
+@media screen and (max-width: 414px) {
   .hamburger {
     display: block;
   }
