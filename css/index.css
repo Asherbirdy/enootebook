@@ -290,9 +290,6 @@ main .main-subtitle {
     width: 100%;
   }
   /* -------- main -------- */
-  body {
-    width: 414px;
-  }
 
   main {
     width: 100%;
@@ -337,4 +334,7 @@ main .main-subtitle {
   footer {
     width: 100%;
   }
+}
+
+@media screen and (max-width: 390px) {
 }
