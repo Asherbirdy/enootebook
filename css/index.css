@@ -254,6 +254,8 @@ main .main-subtitle {
     align-items: center;
     justify-content: center;
     height: 200px;
+    margin: 0;
+    box-sizing: border-box;
   }
 
   .header-banner-box {
