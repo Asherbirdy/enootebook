@@ -101,6 +101,14 @@ body {
   line-height: 1.6;
 }
 
+.arrow-box {
+  text-align: center;
+}
+
+i {
+  color: #3c91e0;
+}
+
 @media screen and (max-width: 414px) {
   .wrapper {
     width: 414px;
@@ -123,4 +131,7 @@ body {
   .sub-title {
     order: -2;
   }
+}
+
+@media screen and (max-width: 390px) {
 }
