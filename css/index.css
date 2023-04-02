@@ -42,6 +42,9 @@ body {
   margin-bottom: 20px;
 }
 
+.top_banner_btnBox {
+}
+
 .btn-free {
   display: inline-block;
   background-color: orange;
@@ -52,9 +55,19 @@ body {
   border-radius: 5px;
 }
 
+.btn-banner-free {
+  display: inline-block;
+  background-color: orange;
+  text-decoration: none;
+  color: white;
+
+  padding: 10px 20px;
+  border: 3px solid orange;
+  border-radius: 5px;
+}
+
 .btn-update {
   display: inline-block;
-  margin-left: 10px;
   text-decoration: none;
   border: 3px solid white;
   padding: 10px 20px;
