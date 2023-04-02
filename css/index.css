@@ -250,11 +250,15 @@ main .main-subtitle {
     width: 100%;
   }
   .header-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 200px;
   }
 
   .header-banner-box {
-    margin-top: 45px;
+    margin-top: 0px;
+    margin-left: 0px;
   }
 
   .header-banner-box h1 {
