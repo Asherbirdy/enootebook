@@ -201,7 +201,7 @@ th {
   }
 
   .head-bn-title {
-    margin-top: 30px;
+    margin-top: 50px;
     font-size: 25px;
   }
 
@@ -222,6 +222,30 @@ th {
 
   .learn-all-cardbox {
     flex-direction: column;
+  }
+
+  /* 第三個banner */
+
+  .compare-in {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .compare-title {
+    font-size: 30px;
+  }
+
+  .compare-subtitle {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  table {
+    font-size: 10px;
+  }
+  th,
+  td {
+    padding: 20px 18px;
   }
 }
 
