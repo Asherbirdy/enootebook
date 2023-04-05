@@ -367,9 +367,16 @@
   .mc-leftbox {
     width: 100%;
   }
-
+  .top-text-box {
+    flex-direction: column;
+    align-items: start;
+  }
   .top-text-box .btn-text a {
     padding: 3px 5px;
+  }
+
+  .loadCurSort {
+    display: none;
   }
   .modal {
     padding: 0;
