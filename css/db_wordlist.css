@@ -378,10 +378,12 @@
     width: 80%;
     margin: 35% auto;
   }
+  .icon_delete {
+    margin-right: 10px;
+  }
 
-  .starbox {
-    position: relative;
-    right: 10px;
+  .loadCurSort {
+    display: none;
   }
 }
 
