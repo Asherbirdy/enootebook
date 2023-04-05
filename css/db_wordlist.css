@@ -369,7 +369,7 @@
   }
 
   .top-text-box .btn-text a {
-    padding: 7px;
+    padding: 3px 5px;
   }
   .modal {
     padding: 0;
@@ -378,12 +378,9 @@
     width: 80%;
     margin: 35% auto;
   }
+
   .icon_delete {
     margin-right: 10px;
-  }
-
-  .loadCurSort {
-    display: none;
   }
 }
 
