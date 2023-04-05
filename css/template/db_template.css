@@ -190,13 +190,10 @@ nav .menu-items {
   transform: translate(-50%, -50%);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   z-index: 999;
-
   opacity: 0;
-
-  transition: opacity 1s ease;
+  /* transition: opacity 1s ease; */
   pointer-events: none;
-
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  /* transition: transform 0.3s ease, opacity 0.3s ease; */
 }
 
 .popup.show {
@@ -292,5 +289,10 @@ nav .menu-items {
     display: flex;
     align-items: center;
     gap: 10px;
+  }
+
+  .popup {
+    transition: opacity 1s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
   }
 }

@@ -18,7 +18,7 @@
 }
 
 .searchbar {
-  width: calc(100% - 50px - 283px);
+  width: calc(100% - 50px - 93px);
   padding: 12px;
 
   font-size: 15px;
@@ -357,4 +357,33 @@
   text-decoration: none;
   text-align: center;
   margin-bottom: 10px;
+}
+
+@media screen and (max-width: 414px) {
+  .mc-rightbox {
+    display: none;
+  }
+
+  .mc-leftbox {
+    width: 100%;
+  }
+
+  .top-text-box .btn-text a {
+    padding: 7px;
+  }
+  .modal {
+    padding: 0;
+  }
+  .modal-content {
+    width: 80%;
+    margin: 35% auto;
+  }
+
+  .starbox {
+    position: relative;
+    right: 10px;
+  }
+}
+
+@media screen and (max-width: 390px) {
 }
