@@ -193,4 +193,19 @@ th {
 }
 
 @media screen and (max-width: 414px) {
+  /* 第一個Banner */
+  .head-bn {
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: none;
+  }
+
+  .head-bn-title {
+    margin-top: 30px;
+    font-size: 25px;
+  }
+
+  .head-bn-textbox {
+    flex-direction: column;
+  }
 }
