@@ -111,3 +111,20 @@
   gap: 20px;
 }
 /*  */
+
+@media screen and (max-width: 414px) {
+  .dash-content .boxes {
+    gap: 5px;
+  }
+  .dash-content .boxes .box {
+    width: 70px;
+  }
+
+  .boxes .box .text {
+    font-size: 5px;
+  }
+
+  .boxes .box .number {
+    font-size: 50px;
+  }
+}
