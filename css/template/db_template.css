@@ -266,7 +266,7 @@ nav .menu-items {
   .popup {
     transition: opacity 1s ease;
     transition: transform 0.3s ease, opacity 0.3s ease;
-    height: 20%;
+    height: 30%;
   }
 
   .popup.show {
