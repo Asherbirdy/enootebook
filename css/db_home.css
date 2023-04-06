@@ -115,12 +115,12 @@
     gap: 5px;
   }
   .dash-content .boxes .box {
-    width: 70px;
     padding: 30px 13px;
   }
 
   .dash-content .boxes {
-    gap: 0;
+    box-sizing: border-box;
+    gap: 10px;
   }
 
   .dash-testRecord {
