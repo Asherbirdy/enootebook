@@ -196,34 +196,6 @@ nav .menu-items {
   /* transition: transform 0.3s ease, opacity 0.3s ease; */
 }
 
-.popup.show {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* 設置導覽列樣式 */
-.popup_nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  padding: 20px;
-}
-
-.popup_nav a {
-  color: #333;
-  text-decoration: none;
-  font-size: 1.2rem;
-  margin: 10px;
-  padding: 10px 20px;
-  border-radius: 5px;
-}
-
-.popup_nav a:hover {
-  background-color: #eee;
-}
-
 /* 設置觸發按鈕樣式 */
 .trigger {
   background-color: #333;
@@ -294,5 +266,68 @@ nav .menu-items {
   .popup {
     transition: opacity 1s ease;
     transition: transform 0.3s ease, opacity 0.3s ease;
+    height: 20%;
+  }
+
+  .popup.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* 設置導覽列樣式 */
+  .popup_nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .popup_nav a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 50px;
+  }
+
+  .popup_nav a:hover {
+    background-color: #eee;
+  }
+
+  .rwd_navlink_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .rwd_navlink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .rwd_navlink p {
+    font-size: 10px;
+  }
+
+  .rwd_logout_box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .rwd_logout_box a {
+    display: inline-block;
+    width: 50px;
+    font-size: 4px;
+    background-color: hsl(202, 100%, 86%);
+    text-align: center;
+  }
+  .rwd_icon {
+    width: 40px;
   }
 }
