@@ -54,3 +54,19 @@
   padding: 10px 0;
   border-radius: 5px;
 }
+
+@media screen and (max-width: 414px) {
+  .exam-box {
+    flex-direction: column;
+    margin: 0 40px;
+    margin-bottom: 20px;
+  }
+
+  .btn-submit {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 390px) {
+}
