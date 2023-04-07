@@ -13,14 +13,14 @@
     <title>Enotebook</title>
   </head>
   <body>
-    <nav>
+    <nav class="navbar">
       <div class="top-info">
         <img class="logo" src="svg/01_logo/enotebook_e_grey.svg" />
       </div>
 
       <div class="menu-items">
         <ul class="nav-links">
-          <li>
+          <li class="nav-item">
             <a href="db_home.html">
               <i>
                 <img class="icon-s" src="svg/02_icon/icon-home.svg" />
@@ -29,7 +29,7 @@
               <span class="link-name">主頁面</span>
             </a>
           </li>
-          <li>
+          <li class="nav-item">
             <a href="db_wordlist.html">
               <i>
                 <img class="icon-s" src="svg/02_icon/icon-list.svg" />
@@ -38,7 +38,7 @@
               <span class="link-name">單字筆記簿</span>
             </a>
           </li>
-          <li>
+          <li class="nav-item">
             <a href="db_exam.html">
               <i><img class="icon-s" src="svg/02_icon/icon-test.svg" /></i>
 
@@ -47,13 +47,13 @@
           </li>
         </ul>
         <ul class="logout-mode">
-          <li class="mode">
+          <li class="mode nav-item">
             <a href="index.html">
               <i><img class="icon-s" src="svg/02_icon/icon-logout.svg" /></i>
               <span class="link-name">登出</span>
             </a>
           </li>
-          <li>
+          <li class="nav-item">
             <a href="#">
               <i><img class="icon-s" src="svg/02_icon/icon-logout.svg" /></i>
 
@@ -81,6 +81,11 @@
           <div class="head-box">
             <img src="image/02_Dashboard/user_photo.png" />
             <p>Asher Lien</p>
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
           </div>
         </div>
         <div class="overview">
@@ -114,6 +119,6 @@
         </div>
       </div>
     </div>
-    <script></script>
+    <script src="js/db_temp.js"></script>
   </body>
 </html>
