@@ -194,6 +194,10 @@ nav .menu-items {
   background-color: #444;
 }
 
+.rwd_navlink_box {
+  display: none;
+}
+
 @media screen and (max-width: 414px) {
   .hamburger {
     display: block;
