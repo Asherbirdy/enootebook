@@ -138,6 +138,10 @@
   .record-bigBox {
     width: 100%;
   }
+
+  .smallBox {
+    width: calc(50% - 5px);
+  }
 }
 
 @media screen and (max-width: 390px) {
