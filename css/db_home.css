@@ -140,8 +140,12 @@
   }
 
   .smallBox {
-    width: 35%;
-    /* 30太小 40太大 */
+    width: 37%;
+    /* 35太小 40太大 */
+  }
+
+  .row-text-box {
+    font-size: 10px;
   }
 }
 
