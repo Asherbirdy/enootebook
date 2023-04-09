@@ -134,6 +134,10 @@
   .boxes .box .number {
     font-size: 50px;
   }
+
+  .record-bigBox {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 390px) {
