@@ -106,7 +106,7 @@ function filter(e) {
       output.insertAdjacentHTML('beforeend', HTML);
     });
   } else {
-    nullHtml = `<p>沒有這個單字  點擊 新增單字 來新增單字！</p>`;
+    nullHtml = `<p class="nullWord">沒有這個單字 </p>`;
     output.insertAdjacentHTML('beforeend', nullHtml);
   }
 }

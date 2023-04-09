@@ -391,5 +391,12 @@
   }
 }
 
+.nullWord {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 30px;
+  color: #a5a5a5;
+}
+
 @media screen and (max-width: 390px) {
 }
