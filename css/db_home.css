@@ -75,6 +75,7 @@
 }
 
 .row-text-box {
+  align-self: start;
   margin-left: 5px;
 }
 
@@ -109,6 +110,9 @@
   gap: 20px;
 }
 /*  */
+.icon-m {
+  align-self: start;
+}
 
 @media screen and (max-width: 414px) {
   .dash-content .boxes {
