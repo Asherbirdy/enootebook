@@ -220,10 +220,11 @@ th {
   }
   .learn-all-cardbox {
     box-sizing: border-box;
+    flex-direction: column;
   }
 
-  .learn-all-cardbox {
-    flex-direction: column;
+  .learn-cardbox {
+    margin: 0 43px;
   }
 
   /* 第三個banner */
