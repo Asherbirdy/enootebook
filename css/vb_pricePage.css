@@ -59,6 +59,7 @@
 
 /* ---------------第二個banner------------- */
 .learn-ban-out {
+  box-sizing: border-box;
   width: 100%;
   background-color: #3c91e0;
 }
