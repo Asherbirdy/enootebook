@@ -69,7 +69,7 @@
   .exam-box-card input {
     box-sizing: border-box;
     display: block;
-    width: 250px;
+    width: 100%;
   }
 }
 

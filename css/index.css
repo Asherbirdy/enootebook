@@ -346,6 +346,8 @@ main .main-subtitle {
   }
 
   .mb1-right {
+    box-sizing: border-box;
+    margin: 0 10px;
     padding: 30px 20px;
     border: 1px solid rgb(211, 211, 211);
     margin-bottom: 10px;

@@ -213,9 +213,9 @@ nav .menu-items {
     transform: translateY(-8px) rotate(-45deg);
   }
   .popup {
+    box-sizing: border-box;
     background-color: #fff;
     width: 80%;
-    height: 80%;
     border: 1px solid #ccc;
     border-radius: 10px;
     position: fixed;
@@ -225,9 +225,7 @@ nav .menu-items {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     z-index: 999;
     opacity: 0;
-    /* transition: opacity 1s ease; */
     pointer-events: none;
-    /* transition: transform 0.3s ease, opacity 0.3s ease; */
   }
   .navbar {
     display: none;
@@ -269,7 +267,6 @@ nav .menu-items {
   .popup {
     transition: opacity 1s ease;
     transition: transform 0.3s ease, opacity 0.3s ease;
-    height: 30%;
   }
 
   .popup.show {
@@ -326,7 +323,7 @@ nav .menu-items {
   .rwd_logout_box a {
     display: inline-block;
     width: 50px;
-    font-size: 4px;
+    font-size: 10px;
     background-color: hsl(202, 100%, 86%);
     text-align: center;
   }
