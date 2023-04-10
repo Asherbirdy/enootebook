@@ -204,7 +204,7 @@ main .main-subtitle {
 }
 
 .mb1-right p {
-  width: 300px;
+  padding: 0 5px;
   margin-bottom: 20px;
   font-size: 12px;
   line-height: 1.6;
@@ -345,15 +345,19 @@ main .main-subtitle {
     display: none;
   }
 
+  .main-banner1 {
+    width: 100%;
+  }
   .mb1-right {
     box-sizing: border-box;
-    margin: 0 10px;
+    margin: 0 20px;
     padding: 30px 20px;
     border: 1px solid rgb(211, 211, 211);
     margin-bottom: 10px;
   }
 
   .mb2-box {
+    box-sizing: border-box;
     width: 100%;
   }
 
