@@ -66,8 +66,10 @@
     text-align: center;
     margin: 0 auto;
   }
-  input {
-    margin: 0 auto;
+  .exam-box-card input {
+    box-sizing: border-box;
+    display: block;
+    width: 250px;
   }
 }
 
